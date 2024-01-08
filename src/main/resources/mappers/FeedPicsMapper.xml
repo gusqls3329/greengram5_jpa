@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.greengram4.feed.FeedPicsMapper">
+
+    <insert id="insFeedPics">
+        INSERT INTO t_feed_pics
+        ( ifeed, pic )
+        VALUES
+        <foreach collection="pics" item="item" separator=",">
+            ( #{ifeed}, #{item} )
+        </foreach>
+    </insert>
+
+    <select id="selFeedPicsAll">
+        SELECT pic FROM t_feed_pics
+        WHERE ifeed = #{ifeed}
+    </select>
+
+    <delete id="delFeedPicsAll">
+        DELETE A
+        FROM t_feed_pics A
+        INNER JOIN t_feed B
+        ON A.ifeed = B.ifeed
+        WHERE B.ifeed = #{ifeed}
+        AND B.iuser = #{iuser}
+    </delete>
+
+</mapper>
