@@ -29,7 +29,7 @@ class FeedPicsMapperTest {
         List<String> pics = new ArrayList<>();
 
         List<String> pic = mapper.selFeedPicsAll(ifeed);
-        dto.setPics(pics);
+        //dto.setPics(pics);
         pics.add("103-1");
         pics.add("103-2");
         pics.add("103-3");
@@ -53,7 +53,7 @@ class FeedPicsMapperTest {
         List<String> pics = new ArrayList<>();
         pics.add("a.jpg");
         pics.add("b.jpg");
-        this.dto.setPics(pics);
+        //this.dto.setPics(pics);
 
     }
     @BeforeEach

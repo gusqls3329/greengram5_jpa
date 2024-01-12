@@ -14,7 +14,12 @@ import java.io.InputStream;
 @Slf4j
 @Configuration
 public class FirebaseConfiguration {
-
+/*
+a사람 : ㄱ,ㄴ,ㄷ
+b사람 : 1,2,3
+c사람 : a,b,c
+내가 1,2,3인사람 응답해 하면 b가 응답하는 방식
+ */
     @Value("${fcm.certification}")
     private String googleApplicationCredentials;
 

@@ -32,7 +32,7 @@ public class FeedIntegrationTest extends BaseIntegrationTest { //BaseIntegration
         List<String> pics = new ArrayList<>();
         pics.add("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEyMTdfMjc5%2FMDAxNzAyODE4NzY5MTQx.NfakGWVT0TEQOm4Wn0CJ1l97AI1l5fnn_xnq5bztSC4g.qOokq2aQEkZ1oYgGhM7Cz3w-my_sd9XjrhmSnTq2cekg.JPEG.tnrdls215%2FP20231217_084431722_C00CEFDD-43C2-4336-B38D-20EC129E1EE2.JPG&type=a340");
         pics.add("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150128_10%2Fshrinkles_14224321219420Hk2f_JPEG%2F%25B4%25E7%25B1%25D9_%25BB%25F6%25C4%25A5.jpg&type=a340");
-        dto.setPics(pics);
+        //dto.setPics(pics);
 
         String json = om.writeValueAsString(dto);//dto를 제이슨으로 변경후 문자로 변경
         System.out.println("json: " + json);

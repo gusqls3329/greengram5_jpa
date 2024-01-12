@@ -3,9 +3,12 @@ package com.green.greengram4.feed;
 import com.green.greengram4.common.Const;
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.feed.model.*;
+import com.green.greengram4.security.AuthenticationFacade;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -17,8 +20,11 @@ public class FeedService {
     private final FeedPicsMapper picsMapper;
     private final FeedFavMapper favMapper;
     private final FeedCommentMapper commentMapper;
+    private final AuthenticationFacade authenticationFacade; //서비스에서 로그인을 안해도 괜찮을 경우에 오류가 발생
 
     public ResVo postFeed(FeedInsDto dto) {
+        dto.setIuser(authenticationFacade.getLoginUserPk());
+        log.info("dto.getIuser : {}",dto.getIuser());
         int feedAffectedRows = mapper.insFeed(dto);
         log.info("feedAffectedRows : {}",feedAffectedRows);
         int feedPicsAffectedRows = picsMapper.insFeedPics(dto);
