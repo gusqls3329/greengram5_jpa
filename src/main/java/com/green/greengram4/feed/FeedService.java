@@ -1,9 +1,11 @@
 package com.green.greengram4.feed;
 
 import com.green.greengram4.common.Const;
+import com.green.greengram4.common.MyFileUtils;
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.feed.model.*;
 import com.green.greengram4.security.AuthenticationFacade;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -21,14 +23,21 @@ public class FeedService {
     private final FeedFavMapper favMapper;
     private final FeedCommentMapper commentMapper;
     private final AuthenticationFacade authenticationFacade; //서비스에서 로그인을 안해도 괜찮을 경우에 오류가 발생
+    private final MyFileUtils myFileUtils;
 
     public ResVo postFeed(FeedInsDto dto) {
         dto.setIuser(authenticationFacade.getLoginUserPk());
         log.info("dto.getIuser : {}",dto.getIuser());
         int feedAffectedRows = mapper.insFeed(dto);
-        log.info("feedAffectedRows : {}",feedAffectedRows);
-        int feedPicsAffectedRows = picsMapper.insFeedPics(dto);
-        log.info("feedPicsAffectedRows : {}",feedPicsAffectedRows);
+        String target = "/feed/" + dto.getIfeed();
+
+        FeedPicsInsDto insDto = new FeedPicsInsDto();
+        insDto.setIfeed(dto.getIfeed());
+        for (MultipartFile file : dto.getPics()){
+            String saveFileNm = myFileUtils.transferTo(file, target); //컴퓨터에 저장
+            insDto.getPics().add(saveFileNm); //데이터베이스에 저장
+        }
+        int feedPicsAffectedRows = picsMapper.insFeedPics(insDto);
         return new ResVo(dto.getIfeed());
     }
 

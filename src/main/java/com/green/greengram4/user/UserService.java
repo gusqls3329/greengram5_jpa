@@ -84,7 +84,7 @@ public class UserService {
         cookieUtils.deleteCookie(res,"rt");
         return new ResVo(1);
     }
-    public UserSigninVo getRefrechToken(HttpServletRequest req){
+    public UserSigninVo getRefrechToken(HttpServletRequest req){ //로그인에서 accessToken으로 판단해서 유효한지 아닌지 판단  : access가 만료가 되었고 RefrechToken기간이 남았다면 access토큰을 발급해주ㅠㅁ
         Cookie cookie = cookieUtils.getCookie(req,"rt");
         String token = cookie.getValue();
         if(!jwtTokenProvider.isValidateToken(token)){
@@ -105,7 +105,7 @@ public class UserService {
         return mapper.selUserInfo(dto);
     }
 
-    public ResVo patchUserFirebaseToken(UserFirebaseTokenPatchDto dto) {
+    public ResVo patchUserFirebaseToken(UserFirebaseTokenPatchDto dto) { //FirebaseToken을 발급 : Firebase방식 : 메시지를 보낼때 ip대신 고유값(Firebase)을 가지고 있는사람에게 메시지 전달
         int affectedRows = mapper.updUserFirebaseToken(dto);
         return new ResVo(affectedRows);
     }

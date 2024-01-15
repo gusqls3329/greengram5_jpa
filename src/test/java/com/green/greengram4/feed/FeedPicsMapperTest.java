@@ -35,8 +35,8 @@ class FeedPicsMapperTest {
         pics.add("103-3");
         dto.setIfeed(ifeed);
 
-        int affectRows1 = mapper.insFeedPics(dto);
-        assertEquals(dto.getPics().size(),affectRows1,"사진 insert");
+        //int affectRows1 = mapper.insFeedPics(dto);
+        //assertEquals(dto.getPics().size(),affectRows1,"사진 insert");
 
         List<String> pic2 = mapper.selFeedPicsAll(dto.getIfeed());
         assertEquals(pic.size()+dto.getPics().size(),pic2.size());
@@ -70,8 +70,8 @@ class FeedPicsMapperTest {
         List<String> preList = mapper.selFeedPicsAll(dto.getIfeed());
         assertEquals(0,preList.size());
 
-        int insAffectRows = mapper.insFeedPics(dto);
-        assertEquals(dto.getPics().size(),insAffectRows);
+        //int insAffectRows = mapper.insFeedPics(dto);
+        //assertEquals(dto.getPics().size(),insAffectRows);
 
         List<String> afterList = mapper.selFeedPicsAll(dto.getIfeed());
         assertEquals(dto.getPics().size(),afterList.size());

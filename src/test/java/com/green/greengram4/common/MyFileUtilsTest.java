@@ -1,18 +1,22 @@
 package com.green.greengram4.common;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Import;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.io.FileInputStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
+@Slf4j
 @ExtendWith(SpringExtension.class)
 @Import({MyFileUtils.class})
 @TestPropertySource(properties = {
@@ -65,5 +69,16 @@ public class MyFileUtilsTest {
         String rfileNm2 = myFileUtils.getRandomFileNm(fileNm2);
         System.out.println("rfileNm2:{}"+rfileNm2);
 
+    }
+
+    @Test
+    public void transferTo()throws Exception{
+        String fileNm = "intro_bg.jpg";
+        String filePath = "C:/Users/Administrator/Downloads/build/images/" + fileNm; //절대 주소값
+        FileInputStream fis = new FileInputStream(filePath);
+        MultipartFile mf = new MockMultipartFile("pic", fileNm, "jpg", fis); //가짜 MultipartFile 만들기
+
+        String saveFileNm = myFileUtils.transferTo(mf, "/feed/10");
+        log.info("saveFileNm : {}", saveFileNm);
     }
 }
