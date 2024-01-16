@@ -47,16 +47,16 @@ class FeedServiceTest {
 
         FeedInsDto dto = new FeedInsDto();
         dto.setIfeed(110);
-        ResVo vo = service.postFeed(dto);
-        assertEquals(dto.getIfeed(), vo.getResult());
+        FeedPicsInsDto insDto = service.postFeed(dto);
+        assertEquals(dto.getIfeed(), insDto.getIfeed());
 
         verify(mapper).insFeed(any()); //안의 메소드 호출했는지 확인
         verify(picsMapper).insFeedPics(any());
 
         FeedInsDto dto2 = new FeedInsDto();
         dto.setIfeed(200);
-        ResVo vo2 = service.postFeed(dto2);
-        assertEquals(dto2.getIfeed(), vo2.getResult());
+        FeedPicsInsDto insDto1 = service.postFeed(dto2);
+        assertEquals(dto2.getIfeed(), insDto1.getIfeed());
 
     }
 

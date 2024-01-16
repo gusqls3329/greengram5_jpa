@@ -7,7 +7,7 @@ app:
     refresh-token-expiry: 1296000000 #15일
 file:
   dir: D:/download/greengram4/
-
+#@Value("${file.dir}")
 spring:
   servlet:
     multipart:

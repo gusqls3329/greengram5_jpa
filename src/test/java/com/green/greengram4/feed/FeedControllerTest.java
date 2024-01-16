@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.green.greengram4.MocMvcConfig;
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.feed.model.FeedInsDto;
+import com.green.greengram4.feed.model.FeedPicsInsDto;
 import com.green.greengram4.feed.model.FeedSelVo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,8 +39,8 @@ class FeedControllerTest {
 
     @Test
     void postFeed() throws Exception { //throws Exception : 예외가 발생할 수 있어서 던지
-        ResVo result = new ResVo(5);
-        given(service.postFeed(any())).willReturn(result); // given &when 은 같은 역할
+        FeedPicsInsDto insDto = new FeedPicsInsDto();
+        given(service.postFeed(any())).willReturn(insDto); // given &when 은 같은 역할
         //when(service.postFeed(any())).thenReturn(result);
         FeedInsDto dto = new FeedInsDto();
         String json = mapper.writeValueAsString(dto);//dto를 제이슨으로 변경후 문자로 변경
@@ -52,7 +53,7 @@ class FeedControllerTest {
                                 .content(json) // 바디부분에 제이슨을 받는 것.
                 )
                 .andExpect(status().isOk()) //status() : 상태값, isOk(): 통신 성공
-                .andExpect(content().string(mapper.writeValueAsString(result))) //위에 when으로 호출 하면 result로 리턴,
+                .andExpect(content().string(mapper.writeValueAsString(insDto))) //위에 when으로 호출 하면 result로 리턴,
                 .andDo(print()); //결과를 프린트 하라
 
         verify(service).postFeed(any()); //서비스에있는 postFeed가 실행되었는지 검증

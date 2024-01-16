@@ -25,7 +25,7 @@ public class FeedService {
     private final AuthenticationFacade authenticationFacade; //서비스에서 로그인을 안해도 괜찮을 경우에 오류가 발생
     private final MyFileUtils myFileUtils;
 
-    public ResVo postFeed(FeedInsDto dto) {
+    public FeedPicsInsDto postFeed(FeedInsDto dto) {
         dto.setIuser(authenticationFacade.getLoginUserPk());
         log.info("dto.getIuser : {}",dto.getIuser());
         int feedAffectedRows = mapper.insFeed(dto);
@@ -38,7 +38,7 @@ public class FeedService {
             insDto.getPics().add(saveFileNm); //데이터베이스에 저장
         }
         int feedPicsAffectedRows = picsMapper.insFeedPics(insDto);
-        return new ResVo(dto.getIfeed());
+        return insDto;
     }
 
     public List<FeedSelVo> getFeedAll(FeedSelDto dto) {
