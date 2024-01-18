@@ -3,6 +3,8 @@ package com.green.greengram4.feed;
 import com.green.greengram4.common.Const;
 import com.green.greengram4.common.MyFileUtils;
 import com.green.greengram4.common.ResVo;
+import com.green.greengram4.exception.FeedErrorCode;
+import com.green.greengram4.exception.RestApiException;
 import com.green.greengram4.feed.model.*;
 import com.green.greengram4.security.AuthenticationFacade;
 import lombok.Data;
@@ -13,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
+
+import static com.green.greengram4.exception.FeedErrorCode.PICS_MORE_THEN_ONE;
 
 @Slf4j
 @Service
@@ -26,6 +30,9 @@ public class FeedService {
     private final MyFileUtils myFileUtils;
 
     public FeedPicsInsDto postFeed(FeedInsDto dto) {
+        if(dto.getPics() == null){
+            throw new RestApiException(FeedErrorCode.PICS_MORE_THEN_ONE);
+        }
         dto.setIuser(authenticationFacade.getLoginUserPk());
         log.info("dto.getIuser : {}",dto.getIuser());
         int feedAffectedRows = mapper.insFeed(dto);

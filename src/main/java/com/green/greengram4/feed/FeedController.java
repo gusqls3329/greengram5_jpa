@@ -23,7 +23,7 @@ public class FeedController {
 
     @Operation(summary = "피드 등록", description = "피드 등록 처리")
     @PostMapping
-    public FeedPicsInsDto postFeed(@RequestPart List<MultipartFile> pics, @RequestPart FeedInsDto dto) {
+    public FeedPicsInsDto postFeed(@RequestPart(required = false) List<MultipartFile> pics, @RequestPart FeedInsDto dto) {
         log.info("pics:{}", pics);
         log.info("dto:{}",dto);
         dto.setPics(pics);

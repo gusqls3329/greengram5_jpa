@@ -1,6 +1,8 @@
 package com.green.greengram4.user;
 
 import com.green.greengram4.common.*;
+import com.green.greengram4.exception.AuthErrorCode;
+import com.green.greengram4.exception.RestApiException;
 import com.green.greengram4.security.AuthenticationFacade;
 import com.green.greengram4.security.JwtTokenProvider;
 import com.green.greengram4.security.MyPrincipal;
@@ -50,16 +52,27 @@ public class UserService {
 
         return new ResVo(pDto.getIuser()); //회원가입한 iuser pk값이 리턴
     }
+/*
+ 로그인의 원리
+ 아아디와 비번이 맞는지 확인은 AT,RT가 확인 맞다면 AT가 응답을 함
+ 서버는 아이디 비번을 확인하고 종이를 줌(종이=토큰 = AT)
+ 종이를 들고오면 누구인지 판별함
 
+ At는 요청때마다 헤더(요청과 응답)와 바디 (요청과 응답)가 있는데 헤더에 요청을 받아서 온다(헤더의 요청은 swagger에 accessToken을 받아서 자물쇠에 넘김)
+ 헤더의 어디에 받아서 올건지 정해야함 = 지금은 authorizations에 저장함
+ 요청이 올때마가 헤더를 디짐
+ 이용가는 시간이 지나면 로그인이 불가능함  > RT로 다시 토큰을 발급을 하거나, 다시 로그인을 해야함.
+ RT의 시간이 지나면 로그인을 다시 해야함
+ */
     public UserSigninVo signin(HttpServletResponse res, UserSigninDto dto) {
         UserSelDto sDto = new UserSelDto();
         sDto.setUid(dto.getUid());
 
         UserEntity entity = mapper.selUser(sDto);
         if (entity == null) {
-            return UserSigninVo.builder().result(Const.LOGIN_NO_UID).build();
+            throw new RestApiException(AuthErrorCode.NOT_EXIST_USER_ID);
         } else if (!passwordEncoder.matches(dto.getUpw(), entity.getUpw())) {
-            return UserSigninVo.builder().result(Const.LOGIN_DIFF_UPW).build();
+            throw new RestApiException(AuthErrorCode.VALID_PASSWORD);
         }
         MyPrincipal myPrincipal = MyPrincipal.builder().iuser(entity.getIuser()).build();
 
