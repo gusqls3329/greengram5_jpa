@@ -11,6 +11,7 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -28,7 +29,7 @@ public class FeedService {
     private final FeedCommentMapper commentMapper;
     private final AuthenticationFacade authenticationFacade; //서비스에서 로그인을 안해도 괜찮을 경우에 오류가 발생
     private final MyFileUtils myFileUtils;
-
+    @Transactional
     public FeedPicsInsDto postFeed(FeedInsDto dto) {
         if(dto.getPics() == null){
             throw new RestApiException(FeedErrorCode.PICS_MORE_THEN_ONE);
