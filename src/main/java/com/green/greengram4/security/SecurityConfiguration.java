@@ -43,6 +43,7 @@ public class SecurityConfiguration {
                                         , "/swagger.html" //,"/swagger.html"로 접근하면 "/swagger-ui/**"로 사이트가 바뀌기 때문에 둘다 작성해야함
                                         , "/swagger-ui/**"
                                         , "/v3/api-docs/**"//허용을 안하면 라이브러리로 접근이 안됨 꼭 넣기
+                                        , "/api/open/**"
                                 ).permitAll() //requestMatchers permitAll : permitAll, ""사이트를 인증없이 무사 통과 시키겠다, permitAll만 허용하고 나머진 막음
                                 //위 코드는 로그인을 안해도 사용할 수있고 아래는 로그인을 해야한 할 수 있는 코드
                                 .anyRequest().authenticated()

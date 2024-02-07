@@ -1,3 +1,9 @@
+openapi:
+  apartment:
+    base-url: http://openapi.molit.go.kr
+    data-url: OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMS[…]vcAptTradeDev
+    service-key: Ppn69ItLLyZSvBKsgJR8mn9up4T2ZciNqvpUWXpGA7kThhqPDVJN4Om7h8B2XqP6W%2FR6dt3U86rY4eBR4YIQXw%3D%3D
+
 app:
   jwt:
     secret: DaeguGreenArtAcademyClass502RoomForJavaSpringBootFighting #JWT를 만들때 사용하는 키 , 길이가 짧으면 에러 남 #자바코드로 사용하고 싶을경우를 위해, 관리하기 편해서 작성함
@@ -9,14 +15,24 @@ file:
   dir: D:/download/greengram4/
   #dir: 개발할때 사용
 #@Value("${file.dir}")
+logging:
+  level:
+    jdbc:
+      sqlonly: off
+      sqltiming: info
+      resultsettable: info
+      audit: off
+      resultset: off
+      connection: off
+
 spring:
   servlet:
     multipart:
       max-file-size: 5MB
       max-request-size: 15MB
   datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/greengram4
+    # driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:log4jdbc:mariadb://localhost:3306/greengram4
     username: root
     password: green502
 
