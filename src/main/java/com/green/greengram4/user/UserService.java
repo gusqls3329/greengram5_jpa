@@ -21,6 +21,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -74,7 +77,9 @@ public class UserService {
         } else if (!passwordEncoder.matches(dto.getUpw(), entity.getUpw())) {
             throw new RestApiException(AuthErrorCode.VALID_PASSWORD);
         }
-        MyPrincipal myPrincipal = MyPrincipal.builder().iuser(entity.getIuser()).build();
+
+        MyPrincipal myPrincipal = MyPrincipal.builder().iuser(entity.getIuser())
+                .roles(List.of(entity.getRole())).build();
 
         String at = jwtTokenProvider.generateAccessToken(myPrincipal);
         String rt = jwtTokenProvider.generateRefreshToken(myPrincipal);

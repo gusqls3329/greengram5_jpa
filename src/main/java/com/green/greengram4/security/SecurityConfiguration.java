@@ -3,6 +3,7 @@ package com.green.greengram4.security;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -19,35 +20,45 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         //authorizeHttpRequests의 앞 코드는  authorizeHttpRequests에서 허용되는 사이트말고 다 막아줌
-        return httpSecurity.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+        /*return httpSecurity.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 //session을 사용하지 않겠다 : 로그인처리를 session으로 하지않기 때문에
                 //session의 단점 : 서버측 메모리에 저장을 하기때문에(로그인을 하지않아도 로그인 메모리가 사용됨) 사용자가 많이 접속이 되면 공간이 더 늘어나며, 접속이 많을 수록 메모리를 많이 차지함
                 .httpBasic(http -> http.disable()) // security자체에서 제공하는 로그인 화면을 제거  : 리소스를 확보하기 위해서
                 .formLogin(form -> form.disable())
                 .csrf(csrf -> csrf.disable()) //기본으로 제공하는 보안기능 끔 :
                 .authorizeHttpRequests(auth -> auth.requestMatchers(
-                                        "/api/user/signin" //""메소드 상관없이 주소만 허용 : get, delete, post, put상관없이 허용하겠다.
-                                        , "/api/user/signup"
-                                        , "/api/user/firebase-token"
-                                        , "/error"
-                                        , "/err"
-                                        , "/index.html"
-                                        , "/"
-                                        ,"/pic/**"
-                                        , "/fimg/**"
-                                        , "/css/**"
-                                        , "/feed"
-                                        , "/feed/**"
-                                        , "/static/**"
-                                        , "/static/**" //리엑트 static url부분을 허용 : static밑의 모든 폴더
-                                        , "/swagger.html" //,"/swagger.html"로 접근하면 "/swagger-ui/**"로 사이트가 바뀌기 때문에 둘다 작성해야함
-                                        , "/swagger-ui/**"
-                                        , "/v3/api-docs/**"//허용을 안하면 라이브러리로 접근이 안됨 꼭 넣기
-                                        , "/api/open/**"
+                                        "/api/feed"
+                                            , "/api/feed/comment"
+                                        , "api/dm"
+                                       , "api/dm/msg"
                                 ).permitAll() //requestMatchers permitAll : permitAll, ""사이트를 인증없이 무사 통과 시키겠다, permitAll만 허용하고 나머진 막음
                                 //위 코드는 로그인을 안해도 사용할 수있고 아래는 로그인을 해야한 할 수 있는 코드
                                 .anyRequest().authenticated()
                 ).addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) //필터가 jwtAuthenticationFilter 거치고 뒤에있는 .class로 감
+                .exceptionHandling(except -> {
+                    except.authenticationEntryPoint(new JwtAuthenticationEntryPoint())
+                            .accessDeniedHandler(new JwtAccessDeniedHandler());
+                })
+                .build();*/
+        return httpSecurity.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .httpBasic(http -> http.disable()) //  HTTP 기본 인증을 사용하지 않도록 비활성화
+                .formLogin(form -> form.disable())
+                .csrf(csrf -> csrf.disable()) // 스프링에서 기본적으로 제공해주는 보안기능, 여기까지는 막는기능
+                // Cross-Site Request Forgery(CSRF) 공격을 방지하기 위해 CSRF 보호를 비활성화
+                .authorizeHttpRequests(auth -> auth.requestMatchers(
+                                        "/api/feed",
+                                        "/api/feed/comment",
+                                        "/api/dm",
+                                        "api/dm/msg"
+                                ).authenticated()
+                                .requestMatchers(HttpMethod.POST, "/api/user/signout",
+                                        "/api/user/follow").authenticated()
+                                .requestMatchers(HttpMethod.GET, "/api/user").authenticated()
+                                .requestMatchers(HttpMethod.PATCH, "/api/user/pic").authenticated()
+                                .requestMatchers(HttpMethod.GET, "/api/feed/fav").hasAnyRole("ADMIN")
+                                .anyRequest().permitAll()
+                )
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) // 필터 앞에 jwtAuthenticationFilter 끼워넣고 UsernamePasswordAuthenticationFilter 실행
                 .exceptionHandling(except -> {
                     except.authenticationEntryPoint(new JwtAuthenticationEntryPoint())
                             .accessDeniedHandler(new JwtAccessDeniedHandler());

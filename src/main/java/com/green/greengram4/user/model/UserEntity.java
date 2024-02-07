@@ -12,4 +12,5 @@ public class UserEntity {
     private String firebaseToken;
     private String createdAt;
     private String updatedAt;
+    private String role;
 }

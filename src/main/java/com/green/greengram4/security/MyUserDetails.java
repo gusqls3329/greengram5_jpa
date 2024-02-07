@@ -2,9 +2,11 @@ package com.green.greengram4.security;
 
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 @Data
 @Builder
@@ -14,7 +16,11 @@ public class MyUserDetails implements UserDetails { //
 
     @Override //권한이 무엇이있는지에 대한 리턴
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        if(myPrincipal == null){
+            return null;
+        }
+        //map : 사이즈가 똑같음 : roles안에 2개가 들어있다면 2개짜리 다른것을 만드는것
+        return this.myPrincipal.getRoles().stream().map(role -> new SimpleGrantedAuthority("ROLE_"+role)).collect(Collectors.toList());
     }
 
     @Override //1. 루틴(여기에 값이 리턴하도록_아이디가 리턴되도록..) 2. 커스터마이징(직접응답, 리턴까지 직접구현)
