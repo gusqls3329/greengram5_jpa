@@ -23,6 +23,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 //@RestControllerAdvice(basePackages = "com.green.greengram4")
 public class GlobalResponseHandler implements ResponseBodyAdvice<Object> {
+    //GlobalResponseHandler : 기존 컨트롤러에서 리턴하는것들은 구조가 다 다르다(예: RESVO, 다른 객체) 그래서 리턴하는 객체를 통일하는것이다.
+    // 컨트롤러에서 리턴해주는것을 (아래)body에서 잡고 ...
 
     private final ObjectMapper om;
 
