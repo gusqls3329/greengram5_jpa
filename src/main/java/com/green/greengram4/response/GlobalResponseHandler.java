@@ -21,7 +21,7 @@ import java.util.Map;
 
 @Slf4j
 @RequiredArgsConstructor
-@RestControllerAdvice(basePackages = "com.green.greengram4")
+//@RestControllerAdvice(basePackages = "com.green.greengram4")
 public class GlobalResponseHandler implements ResponseBodyAdvice<Object> {
 
     private final ObjectMapper om;
