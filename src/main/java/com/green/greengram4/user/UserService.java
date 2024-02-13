@@ -24,6 +24,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -105,14 +106,22 @@ public class UserService {
         return new ResVo(1);
     }
     public UserSigninVo getRefrechToken(HttpServletRequest req){ //로그인에서 accessToken으로 판단해서 유효한지 아닌지 판단  : access가 만료가 되었고 RefrechToken기간이 남았다면 access토큰을 발급해주ㅠㅁ
-        Cookie cookie = cookieUtils.getCookie(req,"rt");
-        String token = cookie.getValue();
-        if(!jwtTokenProvider.isValidateToken(token)){
+        //Cookie cookie = cookieUtils.getCookie(req,"rt");
+        Optional<String> optRt = cookieUtils.getCookie(req, "rt").map(Cookie::getValue);
+        if(optRt.isEmpty()) {
             return UserSigninVo.builder()
                     .result(Const.FAIL)
                     .accessToken(null)
                     .build();
         }
+        String token = optRt.get();
+        if(!jwtTokenProvider.isValidateToken(token)) {
+            return UserSigninVo.builder()
+                    .result(Const.FAIL)
+                    .accessToken(null)
+                    .build();
+        }
+
         MyUserDetails myUserDetails = (MyUserDetails)jwtTokenProvider.getUserDetailsFromToken(token);
         MyPrincipal myPrincipal = myUserDetails.getMyPrincipal();
         String at = jwtTokenProvider.generateAccessToken(myPrincipal);

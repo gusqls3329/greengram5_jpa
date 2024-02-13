@@ -1,8 +1,10 @@
-package com.green.greengram4.security.oauth2.userinfo;
+package com.green.greengram4.security.oauth2;
 
 import com.green.greengram4.security.MyPrincipal;
 import com.green.greengram4.security.MyUserDetails;
 import com.green.greengram4.security.oauth2.SocialProviderType;
+import com.green.greengram4.security.oauth2.userinfo.Oauth2UserInfo;
+import com.green.greengram4.security.oauth2.userinfo.Oauth2UserInfoFactory;
 import com.green.greengram4.user.UserMapper;
 import com.green.greengram4.user.model.UserEntity;
 import com.green.greengram4.user.model.UserSelDto;

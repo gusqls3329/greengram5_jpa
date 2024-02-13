@@ -11,6 +11,11 @@ app:
     token-type: Bearer
     access token-expiry: 7200000 #2시간 상수처럼 값을 가져다 사용
     refresh-token-expiry: 1296000000 #15일
+  oauth2:
+    authorized-redirect-uris:
+      - http://localhost:8080/oauth/redirect
+      - http://192.168.0.144:52254/oauth/redirect
+      - http://localhost:3000/oauth/redirect
 file:
   dir: D:/download/greengram4/
   #dir: 개발할때 사용
