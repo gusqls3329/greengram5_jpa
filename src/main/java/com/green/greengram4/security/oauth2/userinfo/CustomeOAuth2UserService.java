@@ -42,9 +42,11 @@ public class CustomeOAuth2UserService extends DefaultOAuth2UserService {
                 .uid(oauth2UserInfo.getId()).build();
         UserEntity savedUser = mapper.selUser(dto);
 
-        if(savedUser == null){
+        if(savedUser == null){//한번도 로그인한적이 없다면, 회원가입 처리
             savedUser = signupUser(oauth2UserInfo, socialProviderType);
         }
+
+
         return null;
     }
     private UserEntity signupUser(Oauth2UserInfo oauth2UserInfo, SocialProviderType socialProviderType){

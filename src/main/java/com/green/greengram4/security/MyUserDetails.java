@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 @Data
 @Builder
-public class MyUserDetails implements UserDetails, OAuth2User { //
+public class MyUserDetails implements UserDetails, OAuth2User { //UserDetails : 로컨로그인떄 , OAuth2User : 소셜로그인때 주로 사용
 
     private MyPrincipal myPrincipal;
     private Map<String, Object> attributes;

@@ -12,8 +12,8 @@
     </insert>
 
     <select id="selUser">
-        SELECT iuser, uid, upw, nm, pic, firebase_token AS firebaseToken, role
-             , created_at AS createdAt, updated_at AS updatedAt
+        SELECT iuser, uid, upw, nm, pic, firebase_token AS firebaseToken, role, provider_type as provideType
+                ,created_at AS createdAt, updated_at AS updatedAt
         FROM t_user
         WHERE
             <if test=" uid != null and uid != '' and providerType != null and providerType != ''">
