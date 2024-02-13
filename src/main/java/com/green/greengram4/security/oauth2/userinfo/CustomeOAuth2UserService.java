@@ -1,5 +1,7 @@
 package com.green.greengram4.security.oauth2.userinfo;
 
+import com.green.greengram4.security.MyPrincipal;
+import com.green.greengram4.security.MyUserDetails;
 import com.green.greengram4.security.oauth2.SocialProviderType;
 import com.green.greengram4.user.UserMapper;
 import com.green.greengram4.user.model.UserEntity;
@@ -42,27 +44,36 @@ public class CustomeOAuth2UserService extends DefaultOAuth2UserService {
                 .uid(oauth2UserInfo.getId()).build();
         UserEntity savedUser = mapper.selUser(dto);
 
+        MyPrincipal myPrincipal = MyPrincipal.builder()
+                .iuser(savedUser.getIuser()).build();
+        myPrincipal.getRoles().add(savedUser.getRole());
+
         if(savedUser == null){//한번도 로그인한적이 없다면, 회원가입 처리
             savedUser = signupUser(oauth2UserInfo, socialProviderType);
         }
 
+        return MyUserDetails.builder()
+                .userEntity(savedUser)
+                .myPrincipal(myPrincipal)
+                .attributes(user.getAttributes()).build();
 
-        return null;
     }
     private UserEntity signupUser(Oauth2UserInfo oauth2UserInfo, SocialProviderType socialProviderType){
         UserSignupProcDto dto = new UserSignupProcDto();
         dto.setProviderType(socialProviderType.name());
-        dto.setUid(oauth2UserInfo.getId());
+        dto.setUid(oauth2UserInfo.getId()); //소셜로그인에서 관리하는 pk값(유일값)이 넘어옴
         dto.setUpw("social");
         dto.setNm(oauth2UserInfo.getName());
         dto.setPic(oauth2UserInfo.getImageUrl());
         dto.setRole("USER");
-
         int result = mapper.insUser(dto);
+
         UserEntity entity = new UserEntity();
+        entity.setUid(dto.getUid());
         entity.setIuser(dto.getIuser());
         entity.setRole(dto.getRole());
-
+        entity.setNm(dto.getNm());
+        entity.setPic(dto.getPic());
         return entity;
     }
 }
