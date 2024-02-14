@@ -18425,3 +18425,303 @@ references t_user (iuser)  {executed in 34 ms}[0;39m
 [2024-02-14 15:20:09 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
 [2024-02-14 15:20:09 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 0.964 seconds (process running for 7432.576)[0;39m
 [2024-02-14 15:20:09 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-02-14 15:49:30 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m125. Connection closed. {executed in 1ms} [0;39m
+[2024-02-14 15:49:30 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m125. Connection.close() returned [0;39m
+[2024-02-14 15:49:30 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m131. Connection opened. {executed in 4ms} [0;39m
+[2024-02-14 15:49:30 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m131. Connection.new Connection returned [0;39m
+[2024-02-14 15:49:30 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m131. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 15:49:30 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m131. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 15:49:30 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m130. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 15:49:30 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m130. Connection.close() returned [0;39m
+[2024-02-14 15:49:30 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m132. Connection opened. {executed in 4ms} [0;39m
+[2024-02-14 15:49:30 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m132. Connection.new Connection returned [0;39m
+[2024-02-14 15:49:30 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m132. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 15:49:30 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m132. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 15:49:32 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m129. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 15:49:32 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m129. Connection.close() returned [0;39m
+[2024-02-14 15:49:32 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m133. Connection opened. {executed in 4ms} [0;39m
+[2024-02-14 15:49:32 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m133. Connection.new Connection returned [0;39m
+[2024-02-14 15:49:32 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m133. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 15:49:32 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m133. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 15:49:34 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m128. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 15:49:34 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m128. Connection.close() returned [0;39m
+[2024-02-14 15:49:34 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m134. Connection opened. {executed in 4ms} [0;39m
+[2024-02-14 15:49:34 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m134. Connection.new Connection returned [0;39m
+[2024-02-14 15:49:34 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m134. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 15:49:34 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m134. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 15:49:49 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m121. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 15:49:49 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m121. Connection.close() returned [0;39m
+[2024-02-14 15:49:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m135. Connection opened. {executed in 2ms} [0;39m
+[2024-02-14 15:49:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m135. Connection.new Connection returned [0;39m
+[2024-02-14 15:49:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m135. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 15:49:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m135. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 15:49:58 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m127. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 15:49:58 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m127. Connection.close() returned [0;39m
+[2024-02-14 15:49:58 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m136. Connection opened. {executed in 13ms} [0;39m
+[2024-02-14 15:49:58 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m136. Connection.new Connection returned [0;39m
+[2024-02-14 15:49:58 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m136. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 15:49:58 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m136. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 15:50:04 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m124. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 15:50:04 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m124. Connection.close() returned [0;39m
+[2024-02-14 15:50:04 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m137. Connection opened. {executed in 2ms} [0;39m
+[2024-02-14 15:50:04 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m137. Connection.new Connection returned [0;39m
+[2024-02-14 15:50:04 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m137. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 15:50:04 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m137. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 15:50:04 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m122. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 15:50:04 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m122. Connection.close() returned [0;39m
+[2024-02-14 15:50:04 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m138. Connection opened. {executed in 5ms} [0;39m
+[2024-02-14 15:50:04 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m138. Connection.new Connection returned [0;39m
+[2024-02-14 15:50:04 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m138. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 15:50:04 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m138. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 15:50:08 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m123. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 15:50:08 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m123. Connection.close() returned [0;39m
+[2024-02-14 15:50:08 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m139. Connection opened. {executed in 4ms} [0;39m
+[2024-02-14 15:50:08 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m139. Connection.new Connection returned [0;39m
+[2024-02-14 15:50:08 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m139. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 15:50:08 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m139. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 15:50:09 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m126. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 15:50:09 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m126. Connection.close() returned [0;39m
+[2024-02-14 15:50:09 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m140. Connection opened. {executed in 2ms} [0;39m
+[2024-02-14 15:50:09 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m140. Connection.new Connection returned [0;39m
+[2024-02-14 15:50:09 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m140. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 15:50:09 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m140. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:18:50 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m133. Connection closed. {executed in 1ms} [0;39m
+[2024-02-14 16:18:50 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m133. Connection.close() returned [0;39m
+[2024-02-14 16:18:50 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m141. Connection opened. {executed in 7ms} [0;39m
+[2024-02-14 16:18:50 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m141. Connection.new Connection returned [0;39m
+[2024-02-14 16:18:50 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m141. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:18:50 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m141. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:18:57 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m132. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:18:57 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m132. Connection.close() returned [0;39m
+[2024-02-14 16:18:57 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m142. Connection opened. {executed in 2ms} [0;39m
+[2024-02-14 16:18:57 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m142. Connection.new Connection returned [0;39m
+[2024-02-14 16:18:57 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m142. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:18:57 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m142. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:19:06 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m134. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:19:06 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m134. Connection.close() returned [0;39m
+[2024-02-14 16:19:06 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m143. Connection opened. {executed in 5ms} [0;39m
+[2024-02-14 16:19:06 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m143. Connection.new Connection returned [0;39m
+[2024-02-14 16:19:06 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m143. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:19:06 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m143. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:19:19 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m131. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:19:19 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m131. Connection.close() returned [0;39m
+[2024-02-14 16:19:19 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m144. Connection opened. {executed in 4ms} [0;39m
+[2024-02-14 16:19:19 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m144. Connection.new Connection returned [0;39m
+[2024-02-14 16:19:19 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m144. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:19:19 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m144. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:19:23 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m137. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:19:23 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m137. Connection.close() returned [0;39m
+[2024-02-14 16:19:23 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m145. Connection opened. {executed in 3ms} [0;39m
+[2024-02-14 16:19:23 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m145. Connection.new Connection returned [0;39m
+[2024-02-14 16:19:23 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m145. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:19:23 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m145. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:19:25 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m138. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:19:25 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m138. Connection.close() returned [0;39m
+[2024-02-14 16:19:25 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m146. Connection opened. {executed in 2ms} [0;39m
+[2024-02-14 16:19:25 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m146. Connection.new Connection returned [0;39m
+[2024-02-14 16:19:25 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m146. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:19:25 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m146. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:19:28 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m140. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:19:28 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m140. Connection.close() returned [0;39m
+[2024-02-14 16:19:28 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m147. Connection opened. {executed in 1ms} [0;39m
+[2024-02-14 16:19:28 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m147. Connection.new Connection returned [0;39m
+[2024-02-14 16:19:28 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m147. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:19:28 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m147. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:19:36 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m139. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:19:36 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m139. Connection.close() returned [0;39m
+[2024-02-14 16:19:36 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m148. Connection opened. {executed in 4ms} [0;39m
+[2024-02-14 16:19:36 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m148. Connection.new Connection returned [0;39m
+[2024-02-14 16:19:36 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m148. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:19:36 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m148. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:19:44 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m135. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:19:44 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m135. Connection.close() returned [0;39m
+[2024-02-14 16:19:44 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m149. Connection opened. {executed in 1ms} [0;39m
+[2024-02-14 16:19:44 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m149. Connection.new Connection returned [0;39m
+[2024-02-14 16:19:44 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m149. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:19:44 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m149. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:19:54 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m136. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:19:54 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m136. Connection.close() returned [0;39m
+[2024-02-14 16:19:54 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m150. Connection opened. {executed in 6ms} [0;39m
+[2024-02-14 16:19:54 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m150. Connection.new Connection returned [0;39m
+[2024-02-14 16:19:54 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m150. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:19:54 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m150. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:48:24 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m143. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:48:24 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m143. Connection.close() returned [0;39m
+[2024-02-14 16:48:24 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m151. Connection opened. {executed in 5ms} [0;39m
+[2024-02-14 16:48:24 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m151. Connection.new Connection returned [0;39m
+[2024-02-14 16:48:24 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m151. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:48:24 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m151. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:48:24 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m142. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:48:24 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m142. Connection.close() returned [0;39m
+[2024-02-14 16:48:24 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m152. Connection opened. {executed in 2ms} [0;39m
+[2024-02-14 16:48:24 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m152. Connection.new Connection returned [0;39m
+[2024-02-14 16:48:24 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m152. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:48:24 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m152. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:48:28 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m141. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:48:28 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m141. Connection.close() returned [0;39m
+[2024-02-14 16:48:28 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m153. Connection opened. {executed in 2ms} [0;39m
+[2024-02-14 16:48:28 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m153. Connection.new Connection returned [0;39m
+[2024-02-14 16:48:28 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m153. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:48:28 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m153. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:48:35 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m144. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:48:35 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m144. Connection.close() returned [0;39m
+[2024-02-14 16:48:35 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m154. Connection opened. {executed in 3ms} [0;39m
+[2024-02-14 16:48:35 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m154. Connection.new Connection returned [0;39m
+[2024-02-14 16:48:35 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m154. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:48:35 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m154. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:48:46 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m145. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:48:46 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m145. Connection.close() returned [0;39m
+[2024-02-14 16:48:46 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m155. Connection opened. {executed in 5ms} [0;39m
+[2024-02-14 16:48:46 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m155. Connection.new Connection returned [0;39m
+[2024-02-14 16:48:46 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m155. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:48:46 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m155. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:49:02 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m147. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:49:02 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m147. Connection.close() returned [0;39m
+[2024-02-14 16:49:02 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m156. Connection opened. {executed in 2ms} [0;39m
+[2024-02-14 16:49:02 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m156. Connection.new Connection returned [0;39m
+[2024-02-14 16:49:02 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m156. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:49:02 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m156. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:49:17 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m146. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:49:17 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m146. Connection.close() returned [0;39m
+[2024-02-14 16:49:17 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m157. Connection opened. {executed in 4ms} [0;39m
+[2024-02-14 16:49:17 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m157. Connection.new Connection returned [0;39m
+[2024-02-14 16:49:17 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m157. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:49:17 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m157. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:49:21 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m150. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:49:21 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m150. Connection.close() returned [0;39m
+[2024-02-14 16:49:21 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m158. Connection opened. {executed in 1ms} [0;39m
+[2024-02-14 16:49:21 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m158. Connection.new Connection returned [0;39m
+[2024-02-14 16:49:21 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m158. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:49:21 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m158. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:49:25 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m148. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:49:25 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m148. Connection.close() returned [0;39m
+[2024-02-14 16:49:25 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m159. Connection opened. {executed in 4ms} [0;39m
+[2024-02-14 16:49:25 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m159. Connection.new Connection returned [0;39m
+[2024-02-14 16:49:25 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m159. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:49:25 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m159. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 16:49:32 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m149. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 16:49:32 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m149. Connection.close() returned [0;39m
+[2024-02-14 16:49:32 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m160. Connection opened. {executed in 1ms} [0;39m
+[2024-02-14 16:49:32 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m160. Connection.new Connection returned [0;39m
+[2024-02-14 16:49:32 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m160. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 16:49:32 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m160. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:17:49 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m152. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:17:49 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m152. Connection.close() returned [0;39m
+[2024-02-14 17:17:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m161. Connection opened. {executed in 3ms} [0;39m
+[2024-02-14 17:17:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m161. Connection.new Connection returned [0;39m
+[2024-02-14 17:17:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m161. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:17:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m161. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:18:02 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m154. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:18:02 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m154. Connection.close() returned [0;39m
+[2024-02-14 17:18:02 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m162. Connection opened. {executed in 1ms} [0;39m
+[2024-02-14 17:18:02 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m162. Connection.new Connection returned [0;39m
+[2024-02-14 17:18:02 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m162. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:18:02 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m162. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:18:06 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m153. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:18:06 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m153. Connection.close() returned [0;39m
+[2024-02-14 17:18:06 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m163. Connection opened. {executed in 1ms} [0;39m
+[2024-02-14 17:18:06 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m163. Connection.new Connection returned [0;39m
+[2024-02-14 17:18:06 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m163. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:18:06 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m163. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:18:10 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m151. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:18:10 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m151. Connection.close() returned [0;39m
+[2024-02-14 17:18:10 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m164. Connection opened. {executed in 1ms} [0;39m
+[2024-02-14 17:18:10 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m164. Connection.new Connection returned [0;39m
+[2024-02-14 17:18:10 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m164. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:18:10 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m164. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:18:29 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m155. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:18:29 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m155. Connection.close() returned [0;39m
+[2024-02-14 17:18:29 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m165. Connection opened. {executed in 1ms} [0;39m
+[2024-02-14 17:18:29 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m165. Connection.new Connection returned [0;39m
+[2024-02-14 17:18:29 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m165. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:18:29 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m165. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:18:30 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m156. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:18:30 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m156. Connection.close() returned [0;39m
+[2024-02-14 17:18:30 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m166. Connection opened. {executed in 5ms} [0;39m
+[2024-02-14 17:18:30 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m166. Connection.new Connection returned [0;39m
+[2024-02-14 17:18:30 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m166. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:18:30 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m166. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:18:42 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m159. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:18:42 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m159. Connection.close() returned [0;39m
+[2024-02-14 17:18:42 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m167. Connection opened. {executed in 5ms} [0;39m
+[2024-02-14 17:18:42 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m167. Connection.new Connection returned [0;39m
+[2024-02-14 17:18:42 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m167. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:18:42 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m167. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:18:57 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m157. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:18:57 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m157. Connection.close() returned [0;39m
+[2024-02-14 17:18:57 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m168. Connection opened. {executed in 6ms} [0;39m
+[2024-02-14 17:18:57 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m168. Connection.new Connection returned [0;39m
+[2024-02-14 17:18:57 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m168. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:18:57 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m168. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:19:14 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m160. Connection closed. {executed in 1ms} [0;39m
+[2024-02-14 17:19:14 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m160. Connection.close() returned [0;39m
+[2024-02-14 17:19:14 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m169. Connection opened. {executed in 4ms} [0;39m
+[2024-02-14 17:19:14 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m169. Connection.new Connection returned [0;39m
+[2024-02-14 17:19:14 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m169. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:19:14 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m169. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:19:19 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m158. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:19:19 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m158. Connection.close() returned [0;39m
+[2024-02-14 17:19:19 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m170. Connection opened. {executed in 3ms} [0;39m
+[2024-02-14 17:19:19 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m170. Connection.new Connection returned [0;39m
+[2024-02-14 17:19:19 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m170. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:19:19 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m170. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:47:26 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m161. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:47:26 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m161. Connection.close() returned [0;39m
+[2024-02-14 17:47:26 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m171. Connection opened. {executed in 2ms} [0;39m
+[2024-02-14 17:47:26 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m171. Connection.new Connection returned [0;39m
+[2024-02-14 17:47:26 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m171. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:47:26 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m171. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:47:29 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m162. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:47:29 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m162. Connection.close() returned [0;39m
+[2024-02-14 17:47:29 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m172. Connection opened. {executed in 1ms} [0;39m
+[2024-02-14 17:47:29 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m172. Connection.new Connection returned [0;39m
+[2024-02-14 17:47:29 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m172. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:47:29 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m172. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:47:47 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m165. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:47:47 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m165. Connection.close() returned [0;39m
+[2024-02-14 17:47:47 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m173. Connection opened. {executed in 2ms} [0;39m
+[2024-02-14 17:47:47 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m173. Connection.new Connection returned [0;39m
+[2024-02-14 17:47:47 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m173. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:47:47 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m173. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:47:49 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m163. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:47:49 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m163. Connection.close() returned [0;39m
+[2024-02-14 17:47:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m174. Connection opened. {executed in 1ms} [0;39m
+[2024-02-14 17:47:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m174. Connection.new Connection returned [0;39m
+[2024-02-14 17:47:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m174. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:47:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m174. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:47:59 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m164. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:47:59 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m164. Connection.close() returned [0;39m
+[2024-02-14 17:47:59 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m175. Connection opened. {executed in 5ms} [0;39m
+[2024-02-14 17:47:59 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m175. Connection.new Connection returned [0;39m
+[2024-02-14 17:47:59 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m175. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:47:59 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m175. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:48:15 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m167. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:48:15 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m167. Connection.close() returned [0;39m
+[2024-02-14 17:48:15 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m176. Connection opened. {executed in 5ms} [0;39m
+[2024-02-14 17:48:15 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m176. Connection.new Connection returned [0;39m
+[2024-02-14 17:48:15 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m176. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:48:15 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m176. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:48:17 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m166. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:48:17 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m166. Connection.close() returned [0;39m
+[2024-02-14 17:48:17 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m177. Connection opened. {executed in 3ms} [0;39m
+[2024-02-14 17:48:17 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m177. Connection.new Connection returned [0;39m
+[2024-02-14 17:48:17 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m177. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:48:17 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m177. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:48:37 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m168. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:48:37 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m168. Connection.close() returned [0;39m
+[2024-02-14 17:48:37 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m178. Connection opened. {executed in 5ms} [0;39m
+[2024-02-14 17:48:37 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m178. Connection.new Connection returned [0;39m
+[2024-02-14 17:48:37 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m178. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:48:37 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m178. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:48:49 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m169. Connection closed. {executed in 1ms} [0;39m
+[2024-02-14 17:48:49 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m169. Connection.close() returned [0;39m
+[2024-02-14 17:48:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m179. Connection opened. {executed in 3ms} [0;39m
+[2024-02-14 17:48:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m179. Connection.new Connection returned [0;39m
+[2024-02-14 17:48:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m179. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:48:49 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m179. Connection.getAutoCommit() returned true[0;39m
+[2024-02-14 17:49:04 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m170. Connection closed. {executed in 0ms} [0;39m
+[2024-02-14 17:49:04 [32mINFO [0;39m HikariPool-11 connection closer] [log4jdbc.log4j2] [36m170. Connection.close() returned [0;39m
+[2024-02-14 17:49:04 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m180. Connection opened. {executed in 4ms} [0;39m
+[2024-02-14 17:49:04 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m180. Connection.new Connection returned [0;39m
+[2024-02-14 17:49:04 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m180. Connection.isReadOnly() returned false[0;39m
+[2024-02-14 17:49:04 [32mINFO [0;39m HikariPool-11 connection adder] [log4jdbc.log4j2] [36m180. Connection.getAutoCommit() returned true[0;39m
