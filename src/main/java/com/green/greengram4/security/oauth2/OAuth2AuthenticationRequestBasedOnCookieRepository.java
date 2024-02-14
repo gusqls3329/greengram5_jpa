@@ -39,7 +39,7 @@ public class OAuth2AuthenticationRequestBasedOnCookieRepository
         String serializeAuthReq = cookieUtils.serialize(authorizationRequest);
         cookieUtils.setCookie(response,OAUTH2_AUTHORIZATION_REQUEST_COOKIE_NAME, serializeAuthReq, COOKIE_EXPIRE_SECONDS);
 
-        String redirectUriAfterLogin = request.getParameter(OAUTH2_AUTHORIZATION_REQUEST_COOKIE_NAME);
+        String redirectUriAfterLogin = request.getParameter(REDIRECT_URI_PARAM_COOKIE_NAME);
         log.info("redirectUriAfterLogin:{}", redirectUriAfterLogin);
         if(StringUtils.isNotBlank(redirectUriAfterLogin)){
             cookieUtils.setCookie(response, REDIRECT_URI_PARAM_COOKIE_NAME, redirectUriAfterLogin,COOKIE_EXPIRE_SECONDS);

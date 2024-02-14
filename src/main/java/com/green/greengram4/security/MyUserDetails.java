@@ -35,7 +35,7 @@ public class MyUserDetails implements UserDetails, OAuth2User { //UserDetails : 
 
     @Override//1. 루틴(여기에 값이 리턴하도록_비번이 리턴되도록..) 2. 커스터마이징(직접응답, 리턴까지 직접구현)
     public String getUsername() {
-        return userEntity.getUid();
+        return userEntity == null ? null : userEntity.getUid();
     }
 
     @Override //Account가Expired가 안되었나
