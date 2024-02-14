@@ -1,6 +1,6 @@
 package com.green.greengram4.security;
 
-import com.green.greengram4.user.model.UserEntity;
+import com.green.greengram4.user.model.UserModel;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -17,7 +17,7 @@ public class MyUserDetails implements UserDetails, OAuth2User { //UserDetails : 
 
     private MyPrincipal myPrincipal;
     private Map<String, Object> attributes;
-    private UserEntity userEntity; //
+    private UserModel userModel; //
 
     @Override //권한이 무엇이있는지에 대한 리턴
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -35,7 +35,7 @@ public class MyUserDetails implements UserDetails, OAuth2User { //UserDetails : 
 
     @Override//1. 루틴(여기에 값이 리턴하도록_비번이 리턴되도록..) 2. 커스터마이징(직접응답, 리턴까지 직접구현)
     public String getUsername() {
-        return userEntity == null ? null : userEntity.getUid();
+        return userModel == null ? null : userModel.getUid();
     }
 
     @Override //Account가Expired가 안되었나

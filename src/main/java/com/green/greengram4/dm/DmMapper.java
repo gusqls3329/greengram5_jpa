@@ -1,7 +1,7 @@
 package com.green.greengram4.dm;
 
 import com.green.greengram4.dm.model.*;
-import com.green.greengram4.user.model.UserEntity;
+import com.green.greengram4.user.model.UserModel;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -11,7 +11,7 @@ public interface DmMapper {
     //----------------------- t_dm
     int insDm(DmInsDto dto);
     List<DmSelVo> selDmAll(DmSelDto dto);
-    UserEntity selOtherPersonByLoginUser(DmMsgInsDto dto);
+    UserModel selOtherPersonByLoginUser(DmMsgInsDto dto);
     int updDmLastMsg(DmMsgInsDto dto);
     int updDmLastMsgAfterDelByLastMsg(DmMsgDelDto dto);
 

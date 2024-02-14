@@ -2,11 +2,10 @@ package com.green.greengram4.security.oauth2;
 
 import com.green.greengram4.security.MyPrincipal;
 import com.green.greengram4.security.MyUserDetails;
-import com.green.greengram4.security.oauth2.SocialProviderType;
 import com.green.greengram4.security.oauth2.userinfo.Oauth2UserInfo;
 import com.green.greengram4.security.oauth2.userinfo.Oauth2UserInfoFactory;
 import com.green.greengram4.user.UserMapper;
-import com.green.greengram4.user.model.UserEntity;
+import com.green.greengram4.user.model.UserModel;
 import com.green.greengram4.user.model.UserSelDto;
 import com.green.greengram4.user.model.UserSignupProcDto;
 import lombok.RequiredArgsConstructor;
@@ -44,7 +43,7 @@ public class CustomeOAuth2UserService extends DefaultOAuth2UserService {
         UserSelDto dto = UserSelDto.builder()
                 .providerType(socialProviderType.name())
                 .uid(oauth2UserInfo.getId()).build();
-        UserEntity savedUser = mapper.selUser(dto);
+        UserModel savedUser = mapper.selUser(dto);
 
         if(savedUser == null){//한번도 로그인한적이 없다면, 회원가입 처리
             savedUser = signupUser(oauth2UserInfo, socialProviderType);
@@ -57,12 +56,12 @@ public class CustomeOAuth2UserService extends DefaultOAuth2UserService {
 
 
         return MyUserDetails.builder()
-                .userEntity(savedUser)
+                .userModel(savedUser)
                 .myPrincipal(myPrincipal)
                 .attributes(user.getAttributes()).build();
 
     }
-    private UserEntity signupUser(Oauth2UserInfo oauth2UserInfo, SocialProviderType socialProviderType){
+    private UserModel signupUser(Oauth2UserInfo oauth2UserInfo, SocialProviderType socialProviderType){
         UserSignupProcDto dto = new UserSignupProcDto();
         dto.setProviderType(socialProviderType.name());
         dto.setUid(oauth2UserInfo.getId()); //소셜로그인에서 관리하는 pk값(유일값)이 넘어옴
@@ -72,7 +71,7 @@ public class CustomeOAuth2UserService extends DefaultOAuth2UserService {
         dto.setRole("USER");
         int result = mapper.insUser(dto);
 
-        UserEntity entity = new UserEntity();
+        UserModel entity = new UserModel();
         entity.setUid(dto.getUid());
         entity.setIuser(dto.getIuser());
         entity.setRole(dto.getRole());

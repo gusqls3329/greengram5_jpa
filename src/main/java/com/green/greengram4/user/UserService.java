@@ -9,20 +9,15 @@ import com.green.greengram4.security.MyPrincipal;
 import com.green.greengram4.security.MyUserDetails;
 import com.green.greengram4.user.model.*;
 
-import io.jsonwebtoken.Claims;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.checkerframework.checker.units.qual.C;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -72,7 +67,7 @@ public class UserService {
         UserSelDto sDto = new UserSelDto();
         sDto.setUid(dto.getUid());
 
-        UserEntity entity = mapper.selUser(sDto);
+        UserModel entity = mapper.selUser(sDto);
         if (entity == null) {
             throw new RestApiException(AuthErrorCode.NOT_EXIST_USER_ID);
         } else if (!passwordEncoder.matches(dto.getUpw(), entity.getUpw())) {
