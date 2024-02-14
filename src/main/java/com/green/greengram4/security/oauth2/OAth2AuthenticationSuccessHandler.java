@@ -46,13 +46,14 @@ public class OAth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationSu
 
     @Override
     protected String determineTargetUrl(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
-        Optional<String> redirectUrl = cookieUtils.getCookie(request, REDIRECT_URI_PARAM_COOKIE_NAME)
+        Optional<String> redirectUri = cookieUtils.getCookie(request, REDIRECT_URI_PARAM_COOKIE_NAME)
                 .map(Cookie::getValue);
-        if (redirectUrl.isPresent() && hasAuthorizedRedirectUri(redirectUrl.get())) {
+
+        if(redirectUri.isPresent() && !hasAuthorizedRedirectUri(redirectUri.get())) {
             throw new IllegalArgumentException("Sorry!, Unauthorized Redirect URI");
         }
 
-        String targetUrl = redirectUrl.orElse(getDefaultTargetUrl());
+        String targetUrl = redirectUri.orElse(getDefaultTargetUrl());
 
         MyUserDetails myUserDetails = (MyUserDetails) authentication.getPrincipal();
         MyPrincipal myPrincipal = myUserDetails.getMyPrincipal();
@@ -60,19 +61,21 @@ public class OAth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationSu
         String at = jwtTokenProvider.generateAccessToken(myPrincipal);
         String rt = jwtTokenProvider.generateRefreshToken(myPrincipal);
 
-        int rtCookieMaxAge = (int) appProperties.getJwt().getRefreshTokenExpiry() / 1000;
-        cookieUtils.deleteCookie( response, "rt");
+        //rt > cookie에 담을꺼임
+        int rtCookieMaxAge = appProperties.getJwt().getRefreshTokenCookieMaxAge();
+        cookieUtils.deleteCookie(response, "rt");
         cookieUtils.setCookie(response, "rt", rt, rtCookieMaxAge);
 
         UserEntity userEntity = myUserDetails.getUserEntity();
 
         return UriComponentsBuilder.fromUriString(targetUrl)
                 .queryParam("access_token", at)
-                .queryParam("iuser",userEntity.getIuser())
-                .queryParam("nm",userEntity.getNm()).encode()
-                .queryParam("pic",userEntity.getPic())
+                .queryParam("iuser", userEntity.getIuser())
+                .queryParam("nm", userEntity.getNm()).encode()
+                .queryParam("pic", userEntity.getPic())
                 .queryParam("firebase_token", userEntity.getFirebaseToken())
-                .build().toUriString();
+                .build()
+                .toUriString();
     }
 
     private void clearAuthenticationAttributes(HttpServletRequest request, HttpServletResponse response) {

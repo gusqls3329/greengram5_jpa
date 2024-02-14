@@ -32,28 +32,30 @@ public class OAuth2AuthenticationRequestBasedOnCookieRepository
     @Override
     public void saveAuthorizationRequest(OAuth2AuthorizationRequest authorizationRequest, HttpServletRequest request, HttpServletResponse response) {
         log.info("OAuth2AuthenticationRequestBasedOnCookieRepository - saveAuthorizationRequest");
-        if(authorizationRequest == null){
+        if(authorizationRequest == null) {
             this.removeAuthorizationRequestCookies(response);
             return;
         }
         String serializeAuthReq = cookieUtils.serialize(authorizationRequest);
-        cookieUtils.setCookie(response,OAUTH2_AUTHORIZATION_REQUEST_COOKIE_NAME, serializeAuthReq, COOKIE_EXPIRE_SECONDS);
+        cookieUtils.setCookie(response, OAUTH2_AUTHORIZATION_REQUEST_COOKIE_NAME
+                , serializeAuthReq, COOKIE_EXPIRE_SECONDS);
 
         String redirectUriAfterLogin = request.getParameter(REDIRECT_URI_PARAM_COOKIE_NAME);
-        log.info("redirectUriAfterLogin:{}", redirectUriAfterLogin);
-        if(StringUtils.isNotBlank(redirectUriAfterLogin)){
-            cookieUtils.setCookie(response, REDIRECT_URI_PARAM_COOKIE_NAME, redirectUriAfterLogin,COOKIE_EXPIRE_SECONDS);
+        log.info("redirectUriAfterLogin: {}", redirectUriAfterLogin);
+        if(StringUtils.isNotBlank(redirectUriAfterLogin)) {
+            cookieUtils.setCookie(response, REDIRECT_URI_PARAM_COOKIE_NAME
+                    , redirectUriAfterLogin, COOKIE_EXPIRE_SECONDS);
         }
+
     }
 
     @Override
     public OAuth2AuthorizationRequest removeAuthorizationRequest(HttpServletRequest request, HttpServletResponse response) {
         log.info("OAuth2AuthenticationRequestBasedOnCookieRepository - removeAuthorizationRequest");
-
         return this.loadAuthorizationRequest(request);
     }
 
-    public void removeAuthorizationRequestCookies(HttpServletResponse response){
+    public void removeAuthorizationRequestCookies(HttpServletResponse response) {
         log.info("OAuth2AuthenticationRequestBasedOnCookieRepository - removeAuthorizationRequestCookies");
         cookieUtils.deleteCookie(response, OAUTH2_AUTHORIZATION_REQUEST_COOKIE_NAME);
         cookieUtils.deleteCookie(response, REDIRECT_URI_PARAM_COOKIE_NAME);

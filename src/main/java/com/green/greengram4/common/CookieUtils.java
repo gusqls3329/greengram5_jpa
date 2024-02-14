@@ -32,19 +32,18 @@ public class CookieUtils {
         response.addCookie(cookie); // 응답하면 쿸키가 브라우저에서 생성되거 request일떼미디 쿠키가 담겨서 넘어옴
 
     }
-    public void deleteCookie(HttpServletResponse response, String name){
-        Cookie cookie = new Cookie(name,null);
+    public void deleteCookie(HttpServletResponse response, String name) {
+        Cookie cookie = new Cookie(name, null);
         cookie.setMaxAge(0);
         cookie.setPath("/");
         response.addCookie(cookie);
     }
-    public String serialize(Object obj){
-        //Base64.Encoder enc = Base64.getUrlEncoder();
-        //enc.encodeToString(SerializationUtils.serialize(obj));
-        return Base64.getEncoder().encodeToString(SerializationUtils.serialize(obj));
+
+    public String serialize(Object obj) {
+        return Base64.getUrlEncoder().encodeToString(SerializationUtils.serialize(obj));
     }
 
-    public <T> T deserialize(Cookie cookie, Class<T> cls){
+    public <T> T deserialize(Cookie cookie, Class<T> cls) {
         return cls.cast(
                 SerializationUtils.deserialize(
                         Base64.getUrlDecoder().decode(cookie.getValue())
