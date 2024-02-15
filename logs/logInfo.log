@@ -6131,3 +6131,373 @@ references t_user (iuser)  {executed in 28 ms}[0;39m
 [2024-02-15 11:17:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
 [2024-02-15 11:17:03 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 1.288 seconds (process running for 1321.314)[0;39m
 [2024-02-15 11:17:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m Thread-7] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8080"][0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m Thread-7] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m Thread-7] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Shutdown initiated...[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m11. Connection closed. {executed in 0ms} [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m11. Connection.close() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m12. Connection closed. {executed in 0ms} [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m12. Connection.close() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m13. Connection closed. {executed in 0ms} [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m13. Connection.close() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m14. Connection closed. {executed in 0ms} [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m14. Connection.close() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m15. Connection closed. {executed in 1ms} [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m15. Connection.close() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m16. Connection closed. {executed in 0ms} [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m16. Connection.close() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m17. Connection closed. {executed in 0ms} [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m17. Connection.close() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m18. Connection closed. {executed in 0ms} [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m18. Connection.close() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m19. Connection closed. {executed in 0ms} [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m19. Connection.close() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m20. Connection closed. {executed in 0ms} [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m HikariPool-2 connection closer] [log4jdbc.log4j2] [36m20. Connection.close() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m Thread-7] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Shutdown completed.[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarting Greengram4Application using Java 17.0.8.1 with PID 3000 (D:\2023\java\jpa\build\classes\java\main started by Administrator in D:\2023\java\jpa)[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mThe following 1 profile is active: "jpa"[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.17][0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 285 ms[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-3 - Starting...[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection opened. {executed in 1ms} [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.new Connection returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.getNetworkTimeout() returned 0[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.isReadOnly() returned false[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.getAutoCommit() returned true[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.isValid(1) returned true[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.getTransactionIsolation() returned 4[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-3 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@24f73c15[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-3 - Start completed.[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.getMetaData() returned org.mariadb.jdbc.DatabaseMetaData@27de843[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.new Statement returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@36cf03ef[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. SELECT @@character_set_database, @@sql_mode  {executed in 0 ms}[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. ResultSet.new ResultSet returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.executeQuery(SELECT @@character_set_database, @@sql_mode) returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@12c5df56[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. ResultSet.next() returned true[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. ResultSet.getString(1) returned utf8mb4[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. ResultSet.getString(2) returned IGNORE_SPACE,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.close() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.getCatalog() returned greengram5_jpa[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.getSchema() returned null[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.getSchema() returned null[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.getMetaData() returned org.mariadb.jdbc.DatabaseMetaData@fcf5e8f[0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.createClob() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.createNClob() returned [0;39m
+[2024-02-15 11:18:51 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.clearWarnings() returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.getAutoCommit() returned true[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.new Statement returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@862206d[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_dm_msg drop foreign key if exists FKhgghc3g7tmq5brw7hepu03wsy  {executed in 17 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_dm_msg 
+       drop 
+       foreign key if exists FKhgghc3g7tmq5brw7hepu03wsy) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m22. Connection opened. {executed in 2ms} [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m22. Connection.new Connection returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m22. Connection.isReadOnly() returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m22. Connection.getAutoCommit() returned true[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_dm_msg drop foreign key if exists FKa05i2tssvmn59m90slft9nlqx  {executed in 14 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_dm_msg 
+       drop 
+       foreign key if exists FKa05i2tssvmn59m90slft9nlqx) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m23. Connection opened. {executed in 4ms} [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m23. Connection.new Connection returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m23. Connection.isReadOnly() returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m23. Connection.getAutoCommit() returned true[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_dm_user drop foreign key if exists FK4b76f4kyeay6104938cwxjw00  {executed in 17 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_dm_user 
+       drop 
+       foreign key if exists FK4b76f4kyeay6104938cwxjw00) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m24. Connection opened. {executed in 3ms} [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m24. Connection.new Connection returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m24. Connection.isReadOnly() returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m24. Connection.getAutoCommit() returned true[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_dm_user drop foreign key if exists FK41t4scowibdgo4mq2kgftncov  {executed in 16 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_dm_user 
+       drop 
+       foreign key if exists FK41t4scowibdgo4mq2kgftncov) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m25. Connection opened. {executed in 2ms} [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m25. Connection.new Connection returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m25. Connection.isReadOnly() returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m25. Connection.getAutoCommit() returned true[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_feed drop foreign key if exists FKjn4r0r18k30lyuqt39ddk1knx  {executed in 19 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_feed 
+       drop 
+       foreign key if exists FKjn4r0r18k30lyuqt39ddk1knx) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m26. Connection opened. {executed in 4ms} [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m26. Connection.new Connection returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m26. Connection.isReadOnly() returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m26. Connection.getAutoCommit() returned true[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_feed_comment drop foreign key if exists FKiqi5taprfpudft04ciyhtjpec  {executed in 17 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_feed_comment 
+       drop 
+       foreign key if exists FKiqi5taprfpudft04ciyhtjpec) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m27. Connection opened. {executed in 1ms} [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m27. Connection.new Connection returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m27. Connection.isReadOnly() returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m27. Connection.getAutoCommit() returned true[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_feed_comment drop foreign key if exists FKmja57n0xpg897m8948lodn4b3  {executed in 14 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_feed_comment 
+       drop 
+       foreign key if exists FKmja57n0xpg897m8948lodn4b3) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m28. Connection opened. {executed in 1ms} [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m28. Connection.new Connection returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m28. Connection.isReadOnly() returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m28. Connection.getAutoCommit() returned true[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_user_follow drop foreign key if exists FK6kq2mo6t35svcd1i78l05a49r  {executed in 15 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_user_follow 
+       drop 
+       foreign key if exists FK6kq2mo6t35svcd1i78l05a49r) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m29. Connection opened. {executed in 1ms} [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m29. Connection.new Connection returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m29. Connection.isReadOnly() returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m29. Connection.getAutoCommit() returned true[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_user_follow drop foreign key if exists FK9tpopi88ddy8hxsffjdb2m6pp  {executed in 14 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_user_follow 
+       drop 
+       foreign key if exists FK9tpopi88ddy8hxsffjdb2m6pp) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m30. Connection opened. {executed in 1ms} [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m30. Connection.new Connection returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m30. Connection.isReadOnly() returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m HikariPool-3 connection adder] [log4jdbc.log4j2] [36m30. Connection.getAutoCommit() returned true[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. drop table if exists t_dm  {executed in 10 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    drop table if exists t_dm) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. drop table if exists t_dm_msg  {executed in 8 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    drop table if exists t_dm_msg) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. drop table if exists t_dm_user  {executed in 11 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    drop table if exists t_dm_user) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. drop table if exists t_feed  {executed in 9 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    drop table if exists t_feed) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. drop table if exists t_feed_comment  {executed in 10 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    drop table if exists t_feed_comment) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. drop table if exists t_user  {executed in 9 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    drop table if exists t_user) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. drop table if exists t_user_follow  {executed in 10 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    drop table if exists t_user_follow) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.close() returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.clearWarnings() returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.getAutoCommit() returned true[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.new Statement returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@3009b8dd[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. create table t_dm ( created_at datetime(6), idm BIGINT UNSIGNED not null auto_increment, last_msg_at 
+datetime(6), last_msg varchar(2000), primary key (idm) ) engine=InnoDB  {executed in 9 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    create table t_dm (
+        created_at datetime(6),
+        idm BIGINT UNSIGNED not null auto_increment,
+        last_msg_at datetime(6),
+        last_msg varchar(2000),
+        primary key (idm)
+    ) engine=InnoDB) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. create table t_dm_msg ( created_at datetime(6), idm BIGINT UNSIGNED not null, iuser BIGINT 
+UNSIGNED not null, sep BIGINT UNSIGNED not null, msg varchar(2000) not null, primary key (idm, 
+sep) ) engine=InnoDB  {executed in 11 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    create table t_dm_msg (
+        created_at datetime(6),
+        idm BIGINT UNSIGNED not null,
+        iuser BIGINT UNSIGNED not null,
+        sep BIGINT UNSIGNED not null,
+        msg varchar(2000) not null,
+        primary key (idm, sep)
+    ) engine=InnoDB) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. create table t_dm_user ( idm BIGINT UNSIGNED not null, iuser BIGINT UNSIGNED not null, primary 
+key (idm, iuser) ) engine=InnoDB  {executed in 9 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    create table t_dm_user (
+        idm BIGINT UNSIGNED not null,
+        iuser BIGINT UNSIGNED not null,
+        primary key (idm, iuser)
+    ) engine=InnoDB) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. create table t_feed ( created_at datetime(6), ifeed BIGINT UNSIGNED not null auto_increment, 
+iuser BIGINT UNSIGNED not null, updated_at datetime(6), location varchar(30), contents varchar(1000), 
+primary key (ifeed) ) engine=InnoDB  {executed in 12 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    create table t_feed (
+        created_at datetime(6),
+        ifeed BIGINT UNSIGNED not null auto_increment,
+        iuser BIGINT UNSIGNED not null,
+        updated_at datetime(6),
+        location varchar(30),
+        contents varchar(1000),
+        primary key (ifeed)
+    ) engine=InnoDB) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. create table t_feed_comment ( created_at datetime(6), ifeed BIGINT UNSIGNED not null, ifeed_comment 
+BIGINT UNSIGNED not null auto_increment, iuser BIGINT UNSIGNED not null, updated_at datetime(6), 
+comment varchar(500) not null, primary key (ifeed_comment) ) engine=InnoDB  {executed in 8 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    create table t_feed_comment (
+        created_at datetime(6),
+        ifeed BIGINT UNSIGNED not null,
+        ifeed_comment BIGINT UNSIGNED not null auto_increment,
+        iuser BIGINT UNSIGNED not null,
+        updated_at datetime(6),
+        comment varchar(500) not null,
+        primary key (ifeed_comment)
+    ) engine=InnoDB) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. create table t_user ( created_at datetime(6), iuser BIGINT UNSIGNED not null auto_increment, 
+updated_at datetime(6), nm varchar(25) not null, uid varchar(100) not null, upw varchar(300) 
+not null, firebase_token varchar(2100), pic varchar(2100), provider_type enum ('FACEBOOK','GOOGLE','KAKAO','NAVER','LOCAL') 
+default 'LOCAL' not null, role enum ('USER','ADMIN') not null, primary key (iuser) ) engine=InnoDB  {executed in 11 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    create table t_user (
+        created_at datetime(6),
+        iuser BIGINT UNSIGNED not null auto_increment,
+        updated_at datetime(6),
+        nm varchar(25) not null,
+        uid varchar(100) not null,
+        upw varchar(300) not null,
+        firebase_token varchar(2100),
+        pic varchar(2100),
+        provider_type enum ('FACEBOOK','GOOGLE','KAKAO','NAVER','LOCAL') default 'LOCAL' not null,
+        role enum ('USER','ADMIN') not null,
+        primary key (iuser)
+    ) engine=InnoDB) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. create table t_user_follow ( created_at datetime(6), from_iuser BIGINT UNSIGNED not null, to_iuser 
+BIGINT UNSIGNED not null, primary key (from_iuser, to_iuser) ) engine=InnoDB  {executed in 9 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    create table t_user_follow (
+        created_at datetime(6),
+        from_iuser BIGINT UNSIGNED not null,
+        to_iuser BIGINT UNSIGNED not null,
+        primary key (from_iuser, to_iuser)
+    ) engine=InnoDB) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_user add constraint UKls0rhuaafg32ioliyvkro2l54 unique (uid, provider_type)  {executed in 17 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_user 
+       add constraint UKls0rhuaafg32ioliyvkro2l54 unique (uid, provider_type)) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_dm_msg add constraint FKhgghc3g7tmq5brw7hepu03wsy foreign key (idm) 
+references t_dm (idm)  {executed in 21 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_dm_msg 
+       add constraint FKhgghc3g7tmq5brw7hepu03wsy 
+       foreign key (idm) 
+       references t_dm (idm)) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_dm_msg add constraint FKa05i2tssvmn59m90slft9nlqx foreign key (iuser) 
+references t_user (iuser)  {executed in 26 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_dm_msg 
+       add constraint FKa05i2tssvmn59m90slft9nlqx 
+       foreign key (iuser) 
+       references t_user (iuser)) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_dm_user add constraint FK4b76f4kyeay6104938cwxjw00 foreign key (idm) 
+references t_dm (idm)  {executed in 23 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_dm_user 
+       add constraint FK4b76f4kyeay6104938cwxjw00 
+       foreign key (idm) 
+       references t_dm (idm)) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_dm_user add constraint FK41t4scowibdgo4mq2kgftncov foreign key (iuser) 
+references t_user (iuser)  {executed in 25 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_dm_user 
+       add constraint FK41t4scowibdgo4mq2kgftncov 
+       foreign key (iuser) 
+       references t_user (iuser)) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_feed add constraint FKjn4r0r18k30lyuqt39ddk1knx foreign key (iuser) 
+references t_user (iuser)  {executed in 24 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_feed 
+       add constraint FKjn4r0r18k30lyuqt39ddk1knx 
+       foreign key (iuser) 
+       references t_user (iuser)) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_feed_comment add constraint FKiqi5taprfpudft04ciyhtjpec foreign key 
+(ifeed) references t_feed (ifeed)  {executed in 24 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_feed_comment 
+       add constraint FKiqi5taprfpudft04ciyhtjpec 
+       foreign key (ifeed) 
+       references t_feed (ifeed)) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_feed_comment add constraint FKmja57n0xpg897m8948lodn4b3 foreign key 
+(iuser) references t_user (iuser)  {executed in 26 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_feed_comment 
+       add constraint FKmja57n0xpg897m8948lodn4b3 
+       foreign key (iuser) 
+       references t_user (iuser)) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_user_follow add constraint FK6kq2mo6t35svcd1i78l05a49r foreign key 
+(from_iuser) references t_user (iuser)  {executed in 21 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_user_follow 
+       add constraint FK6kq2mo6t35svcd1i78l05a49r 
+       foreign key (from_iuser) 
+       references t_user (iuser)) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. alter table if exists t_user_follow add constraint FK9tpopi88ddy8hxsffjdb2m6pp foreign key 
+(to_iuser) references t_user (iuser)  {executed in 28 ms}[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.execute(
+    alter table if exists t_user_follow 
+       add constraint FK9tpopi88ddy8hxsffjdb2m6pp 
+       foreign key (to_iuser) 
+       references t_user (iuser)) returned false[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.getWarnings() returned null[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Statement.close() returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [log4jdbc.log4j2] [36m21. Connection.clearWarnings() returned [0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-15 11:18:52 [33mWARN [0;39m restartedMain] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [36mspring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@421565ed, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b9a93b9, org.springframework.security.web.context.SecurityContextHolderFilter@33002f86, org.springframework.security.web.header.HeaderWriterFilter@47d6ad8d, org.springframework.web.filter.CorsFilter@42437458, org.springframework.security.web.authentication.logout.LogoutFilter@ba5c09a, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@5e26f81e, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@3f69aa7c, com.green.greengram4.security.JwtAuthenticationFilter@42bb086f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e02da24, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ccaa0ac, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@300b0c26, org.springframework.security.web.session.SessionManagementFilter@371a5bd0, org.springframework.security.web.access.ExceptionTranslationFilter@69fe9c2e, org.springframework.security.web.access.intercept.AuthorizationFilter@3a88e135][0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 1.152 seconds (process running for 1430.684)[0;39m
+[2024-02-15 11:18:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
