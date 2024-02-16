@@ -144,7 +144,7 @@ spring:
     url: jdbc:log4jdbc:mariadb://localhost:3306/greengram5_jpa
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:

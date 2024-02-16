@@ -3,7 +3,10 @@ package com.green.greengram4.entity;
 import com.green.greengram4.common.ProviderTypeEnum;
 import com.green.greengram4.common.RoleEnum;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 //속성을 바꿀 경우 테이블 삭제 후 다시 만들기
 
@@ -11,6 +14,9 @@ import org.hibernate.annotations.ColumnDefault;
 @Entity
 @Table(name = "t_user", uniqueConstraints = { @UniqueConstraint(columnNames = {"uid", "provider_type"})})
 //uniqueConstraints = { @UniqueConstraint(columnNames = {"uid", "provider_type"})} = 복합키>????????? :""은 컬럼명으로 주어야함
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserEntity extends BaseEntity{
     @Id
     @Column(columnDefinition = "BIGINT UNSIGNED")

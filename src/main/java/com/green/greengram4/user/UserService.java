@@ -1,6 +1,9 @@
 package com.green.greengram4.user;
 
 import com.green.greengram4.common.*;
+import com.green.greengram4.entity.UserEntity;
+import com.green.greengram4.entity.UserFollowEntity;
+import com.green.greengram4.entity.UserFollowIds;
 import com.green.greengram4.exception.AuthErrorCode;
 import com.green.greengram4.exception.RestApiException;
 import com.green.greengram4.security.AuthenticationFacade;
@@ -14,18 +17,23 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.checkerframework.checker.units.qual.C;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
 public class UserService {
     private final UserMapper mapper;
+    private final UserRepository repository;
+    private final UserFollowRepository followRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtTokenProvider jwtTokenProvider;
     private final AppProperties appProperties;
@@ -34,61 +42,44 @@ public class UserService {
     private final MyFileUtils myFileUtils;
 
     public ResVo signup(UserSignupDto dto) {
-        /*String salt = BCrypt.gensalt();
-        String hashedPw = BCrypt.hashpw(dto.getUpw(), salt);*/
         String hashedPw = passwordEncoder.encode(dto.getUpw());
-        //비밀번호 암호화
 
-        UserSignupProcDto pDto = new UserSignupProcDto();
-        pDto.setUid(dto.getUid());
-        pDto.setUpw(hashedPw);
-        pDto.setNm(dto.getNm());
-        pDto.setPic(dto.getPic());
-
-        log.info("before - pDto.iuser : {}", pDto.getIuser());
-        int affectedRows = mapper.insUser(pDto);
-        log.info("after - pDto.iuser : {}", pDto.getIuser());
-
-        return new ResVo(pDto.getIuser()); //회원가입한 iuser pk값이 리턴
+        UserEntity entity = UserEntity.builder()
+                .providerType(ProviderTypeEnum.LOCAL)
+                .uid(dto.getUid())
+                .upw(hashedPw)
+                .nm(dto.getNm())
+                .pic(dto.getPic())
+                .role(RoleEnum.USER).build();
+        repository.save(entity);
+        return new ResVo(entity.getIuser().intValue());
     }
-/*
- 로그인의 원리
- 아아디와 비번이 맞는지 확인은 AT,RT가 확인 맞다면 AT가 응답을 함
- 서버는 아이디 비번을 확인하고 종이를 줌(종이=토큰 = AT)
- 종이를 들고오면 누구인지 판별함
 
- At는 요청때마다 헤더(요청과 응답)와 바디 (요청과 응답)가 있는데 헤더에 요청을 받아서 온다(헤더의 요청은 swagger에 accessToken을 받아서 자물쇠에 넘김)
- 헤더의 어디에 받아서 올건지 정해야함 = 지금은 authorizations에 저장함
- 요청이 올때마가 헤더를 디짐
- 이용가는 시간이 지나면 로그인이 불가능함  > RT로 다시 토큰을 발급을 하거나, 다시 로그인을 해야함.
- RT의 시간이 지나면 로그인을 다시 해야함
- */
     public UserSigninVo signin(HttpServletResponse res, UserSigninDto dto) {
-        UserSelDto sDto = new UserSelDto();
-        sDto.setUid(dto.getUid());
+        Optional<UserEntity> optEntity = repository.findByProviderTypeAndUid(ProviderTypeEnum.LOCAL, dto.getUid());
+        UserEntity entity = optEntity.orElseThrow(() -> new RestApiException(AuthErrorCode.NOT_EXIST_USER_ID));
 
-        UserModel entity = mapper.selUser(sDto);
-        if (entity == null) {
-            throw new RestApiException(AuthErrorCode.NOT_EXIST_USER_ID);
-        } else if (!passwordEncoder.matches(dto.getUpw(), entity.getUpw())) {
+        if (!passwordEncoder.matches(dto.getUpw(), entity.getUpw())) {
             throw new RestApiException(AuthErrorCode.VALID_PASSWORD);
         }
+        int iuser = entity.getIuser().intValue();
+        MyPrincipal myPrincipal = MyPrincipal.builder()
+                .iuser(iuser)
+                .build();
+        myPrincipal.getRoles().add(entity.getRole().name());
 
-        MyPrincipal myPrincipal = MyPrincipal.builder().iuser(entity.getIuser())
-                .roles(List.of(entity.getRole())).build();
 
         String at = jwtTokenProvider.generateAccessToken(myPrincipal);
         String rt = jwtTokenProvider.generateRefreshToken(myPrincipal);
 
-        //rt : cookie에 담을거임
-        int rtCookieMaxAge = (int) appProperties.getJwt().getRefreshTokenExpiry() / 1000;
-        cookieUtils.deleteCookie( res, "rt");
+        //rt > cookie에 담을꺼임
+        int rtCookieMaxAge = appProperties.getJwt().getRefreshTokenCookieMaxAge();
+        cookieUtils.deleteCookie(res, "rt");
         cookieUtils.setCookie(res, "rt", rt, rtCookieMaxAge);
 
-        //at를 리턴하는 코드
         return UserSigninVo.builder()
                 .result(Const.SUCCESS)
-                .iuser(entity.getIuser())
+                .iuser(iuser)
                 .nm(entity.getNm())
                 .pic(entity.getPic())
                 .firebaseToken(entity.getFirebaseToken())
@@ -100,6 +91,7 @@ public class UserService {
         cookieUtils.deleteCookie(res,"rt");
         return new ResVo(1);
     }
+
     public UserSigninVo getRefrechToken(HttpServletRequest req){ //로그인에서 accessToken으로 판단해서 유효한지 아닌지 판단  : access가 만료가 되었고 RefrechToken기간이 남았다면 access토큰을 발급해주ㅠㅁ
         //Cookie cookie = cookieUtils.getCookie(req,"rt");
         Optional<String> optRt = cookieUtils.getCookie(req, "rt").map(Cookie::getValue);
@@ -128,30 +120,56 @@ public class UserService {
     public UserInfoVo getUserInfo(UserInfoSelDto dto) {
         return mapper.selUserInfo(dto);
     }
-
-    public ResVo patchUserFirebaseToken(UserFirebaseTokenPatchDto dto) { //FirebaseToken을 발급 : Firebase방식 : 메시지를 보낼때 ip대신 고유값(Firebase)을 가지고 있는사람에게 메시지 전달
-        int affectedRows = mapper.updUserFirebaseToken(dto);
-        return new ResVo(affectedRows);
+    @Transactional
+    public ResVo patchUserFirebaseToken(UserFirebaseTokenPatchDto dto) {
+        UserEntity entity = repository.getReferenceById((long)authenticationFacade.getLoginUserPk());
+        entity.setFirebaseToken(dto.getFirebaseToken());
+        return new ResVo(Const.SUCCESS);
     }
 
     public UserPicPatchDto patchUserPic(MultipartFile pic) {
-        UserPicPatchDto dto = new UserPicPatchDto();
-        dto.setIuser(authenticationFacade.getLoginUserPk());
-        String path = "/user/" + dto.getIuser();
+        Long iuser = (long)authenticationFacade.getLoginUserPk();
+        UserEntity entity = repository.getReferenceById(iuser);
+        String path = "/user/" + iuser;
         myFileUtils.delFolderTrigger(path);
         String savedPicFileNm = myFileUtils.transferTo(pic, path);
-        dto.setPic(savedPicFileNm);
-        int affectedRows = mapper.updUserPic(dto);
+        entity.setPic(savedPicFileNm);
 
+        UserPicPatchDto dto = new UserPicPatchDto();
+        dto.setIuser(iuser.intValue());
+        dto.setPic(savedPicFileNm);
         return dto;
     }
-
     public ResVo toggleFollow(UserFollowDto dto) {
+        UserFollowIds ids = new UserFollowIds();
+        ids.setFromIuser((long)authenticationFacade.getLoginUserPk());
+        ids.setToIuser(dto.getToIuser());
+
+        AtomicInteger atomic = new AtomicInteger();
+
+        followRepository.findById(ids).ifPresentOrElse(
+                entity -> followRepository.delete(entity)
+                ,() -> {
+                    atomic.set(Const.SUCCESS);
+                    UserFollowEntity saveUserFollowEntity = new UserFollowEntity();
+                    saveUserFollowEntity.setUserFollowIds(ids);
+                    UserEntity fromUserEntity = repository.getReferenceById((long)authenticationFacade.getLoginUserPk());
+                    UserEntity toUserEntity = repository.getReferenceById(dto.getToIuser());
+                    saveUserFollowEntity.setFromUserEntity(fromUserEntity);
+                    saveUserFollowEntity.setToUserEntity(toUserEntity);
+                    followRepository.save(saveUserFollowEntity);
+                }
+        );
+        return new ResVo(atomic.get());
+
+    }
+
+    /*public ResVo toggleFollow(UserFollowDto dto) {
         int delAffectedRows = mapper.delUserFollow(dto);
         if (delAffectedRows == 1) {
             return new ResVo(Const.FAIL);
         }
         int insAffectedRows = mapper.insUserFollow(dto);
         return new ResVo(Const.SUCCESS);
-    }
+    }*/
 }

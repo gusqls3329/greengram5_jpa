@@ -51,8 +51,7 @@ public class SecurityConfiguration {
         return httpSecurity.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .httpBasic(http -> http.disable()) //  HTTP 기본 인증을 사용하지 않도록 비활성화
                 .formLogin(form -> form.disable())
-                .csrf(csrf -> csrf.disable()) // 스프링에서 기본적으로 제공해주는 보안기능, 여기까지는 막는기능
-                // Cross-Site Request Forgery(CSRF) 공격을 방지하기 위해 CSRF 보호를 비활성화
+                .csrf(csrf -> csrf.disable()) // 스프링에서 기본적으로 제공해주는 보안기능, 여기까지는 막는기능0.......비활성화
                 .authorizeHttpRequests(auth -> auth.requestMatchers(
                                         "/api/feed",
                                         "/api/feed/comment",
