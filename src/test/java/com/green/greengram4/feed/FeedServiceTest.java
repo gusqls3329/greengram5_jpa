@@ -94,7 +94,7 @@ class FeedServiceTest {
         when(picsMapper.selFeedPicsAll(2)).thenReturn(feed2Pics);
 
         FeedSelDto dto = new FeedSelDto();
-        List<FeedSelVo> result = service.getFeedAll(dto);
+        List<FeedSelVo> result = service.getFeedAll(dto, any());
 
         assertEquals(list, result); //ture라면 list만 검증하기
 
@@ -160,7 +160,7 @@ class FeedServiceTest {
         when( commentMapper.selFeedCommentAll(fcDto2) ).thenReturn(cmtsFeed2);
 
         FeedSelDto dto1 = new FeedSelDto();
-        List<FeedSelVo> result1 = service.getFeedAll(dto1);
+        List<FeedSelVo> result1 = service.getFeedAll(dto1,any());
 
         assertEquals(list, result1);
 

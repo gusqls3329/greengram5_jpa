@@ -57,6 +57,7 @@ public class UserService {
 
     public UserSigninVo signin(HttpServletResponse res, UserSigninDto dto) {
         Optional<UserEntity> optEntity = repository.findByProviderTypeAndUid(ProviderTypeEnum.LOCAL, dto.getUid());
+        //메소드 이름을 보고 맞는 기능을 해줌 > find : 찾음
         UserEntity entity = optEntity.orElseThrow(() -> new RestApiException(AuthErrorCode.NOT_EXIST_USER_ID));
 
         if (!passwordEncoder.matches(dto.getUpw(), entity.getUpw())) {

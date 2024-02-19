@@ -8,6 +8,5 @@ import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<UserEntity, Long> {//<관련 테이블 entity, pk타입>
     Optional<UserEntity> findByProviderTypeAndUid(ProviderTypeEnum providerType, String uid);
-    //findByProviderTypeAndUid의  by뒤와 and앞의 ProviderType과 ProviderTypeEnum의 ProviderType, 필드명까지 꼭같아야함
-
+    //피드안에있는 멤버필드명과 같으면 됨
 }

@@ -1,10 +1,16 @@
 package com.green.greengram4.feed.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class FeedSelVo {
     private int ifeed;
     private String contents;
