@@ -4,6 +4,7 @@ import com.green.greengram4.common.Const;
 import com.green.greengram4.common.MyFileUtils;
 import com.green.greengram4.common.ResVo;
 import com.green.greengram4.entity.FeedEntity;
+import com.green.greengram4.entity.FeedFavIds;
 import com.green.greengram4.entity.FeedPicsEntity;
 import com.green.greengram4.entity.UserEntity;
 import com.green.greengram4.exception.FeedErrorCode;
@@ -33,6 +34,7 @@ public class FeedService {
     private final FeedRepository repository;
     private final UserRepository userRepository;
     private final FeedCommentRepository CommentRepository;
+    private final FeedFavRepositry feedFavRepositry;
     private final AuthenticationFacade authenticationFacade; //서비스에서 로그인을 안해도 괜찮을 경우에 오류가 발생
     private final MyFileUtils myFileUtils;
 
@@ -80,6 +82,11 @@ public class FeedService {
         return feedEntityList == null ? new ArrayList<>() :
                 feedEntityList.stream().map(item -> {
 
+                    FeedFavIds feedFavIds = new FeedFavIds();
+                    feedFavIds.setIuser((long) authenticationFacade.getLoginUserPk());
+                    feedFavIds.setIfeed(item.getIfeed());
+                    int isFav = feedFavRepositry.findById(feedFavIds).isPresent() ? 1 : 0;
+
                     List<FeedPicsEntity> picList = item.getFeedPicsEntityList();
 
                     List<FeedCommentSelVo> cmtList = CommentRepository.findAllTop4ByFeedEntity(item).stream().map(cmt ->
@@ -105,6 +112,7 @@ public class FeedService {
                             .isMoreComment(cmtList.size() == 4 ? 1 : 0)
                             .comments(cmtList.size() == 4 ?  cmtList.subList(0,3) : cmtList)
                             .pics(picList.stream().map(entity -> entity.getPic()).toList())
+                            .isFav(isFav)
                             .build();
 
                 }).collect(Collectors.toList());
