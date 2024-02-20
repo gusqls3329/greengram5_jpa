@@ -80,6 +80,8 @@ public class FeedService {
         return feedEntityList == null ? new ArrayList<>() :
                 feedEntityList.stream().map(item -> {
 
+                    List<FeedPicsEntity> picList = item.getFeedPicsEntityList();
+
                     List<FeedCommentSelVo> cmtList = CommentRepository.findAllTop4ByFeedEntity(item).stream().map(cmt ->
                             FeedCommentSelVo.builder()
                                     .comment(cmt.getComment())
@@ -91,6 +93,7 @@ public class FeedService {
                                     .build()).collect(Collectors.toList());
 
 
+
                     return FeedSelVo.builder()
                             .ifeed(item.getIfeed().intValue())
                             .contents(item.getContents())
@@ -99,10 +102,12 @@ public class FeedService {
                             .writerIuser(item.getUserEntity().getIuser().intValue())
                             .writerNm(item.getUserEntity().getNm())
                             .writerPic(item.getUserEntity().getPic())
-                            .comments(cmtList)
+                            .isMoreComment(cmtList.size() == 4 ? 1 : 0)
+                            .comments(cmtList.size() == 4 ?  cmtList.subList(0,3) : cmtList)
+                            .pics(picList.stream().map(entity -> entity.getPic()).toList())
                             .build();
-                }).collect(Collectors.toList());
 
+                }).collect(Collectors.toList());
     }
 
 
