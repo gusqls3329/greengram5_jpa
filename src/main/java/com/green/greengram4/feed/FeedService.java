@@ -80,7 +80,7 @@ public class FeedService {
         return feedEntityList == null ? new ArrayList<>() :
                 feedEntityList.stream().map(item -> {
 
-                    List<FeedCommentSelVo> cmtList =CommentRepository.findAllTop4ByFeedEntity(item).stream().map(cmt ->
+                    List<FeedCommentSelVo> cmtList = CommentRepository.findAllTop4ByFeedEntity(item).stream().map(cmt ->
                             FeedCommentSelVo.builder()
                                     .comment(cmt.getComment())
                                     .createdAt(cmt.getCreatedAt().toString())
