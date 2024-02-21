@@ -1,3 +1,4 @@
+
 openapi:
   apartment:
     base-url: http://openapi.molit.go.kr
@@ -29,7 +30,8 @@ logging:
       audit: off
       resultset: off
       connection: off
-
+server:
+  port: 8082
 ---
 spring:
   servlet:
@@ -150,5 +152,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
+        default_batch_fetch_size: 100
     open-in-view: false
     generate-ddl: true

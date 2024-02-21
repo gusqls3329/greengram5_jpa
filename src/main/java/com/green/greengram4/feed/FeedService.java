@@ -70,8 +70,12 @@ public class FeedService {
         entity.getFeedPicsEntityList().addAll(feedPicsEntityList);
         return pDto;
     }
-
     @Transactional
+    public List<FeedSelVo> getFeedAll(FeedSelDto dto, Pageable pageable) {
+        List<FeedSelVo> list = repository.selFeedAll((long)authenticationFacade.getLoginUserPk(), dto.getTargetIuser(), pageable);
+        return list;
+    }
+    /*@Transactional
     public List<FeedSelVo> getFeedAll(FeedSelDto dto, Pageable pageable) {
         List<FeedEntity> feedEntityList = null;
         if (dto.getIsFavList() == 0 && dto.getTargetIuser() > 0) {
@@ -116,7 +120,7 @@ public class FeedService {
                             .build();
 
                 }).collect(Collectors.toList());
-    }
+    }*/
 
 
     public ResVo delFeed(FeedDelDto dto) {

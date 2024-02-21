@@ -30,4 +30,8 @@ public class FeedEntity extends BaseEntity {
     @ToString.Exclude
     @OneToMany(mappedBy = "feedEntity", cascade = CascadeType.PERSIST)
     private List<FeedPicsEntity> feedPicsEntityList = new ArrayList<>();
+
+    @ToString.Exclude
+    @OneToMany
+    private List<FeedFavEntity> feedFavList = new ArrayList<>();
 }
