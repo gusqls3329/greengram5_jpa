@@ -29,8 +29,6 @@ public class QFeedEntity extends EntityPathBase<FeedEntity> {
     //inherited
     public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
 
-    public final ListPath<FeedFavEntity, QFeedFavEntity> feedFavList = this.<FeedFavEntity, QFeedFavEntity>createList("feedFavList", FeedFavEntity.class, QFeedFavEntity.class, PathInits.DIRECT2);
-
     public final ListPath<FeedPicsEntity, QFeedPicsEntity> feedPicsEntityList = this.<FeedPicsEntity, QFeedPicsEntity>createList("feedPicsEntityList", FeedPicsEntity.class, QFeedPicsEntity.class, PathInits.DIRECT2);
 
     public final NumberPath<Long> ifeed = createNumber("ifeed", Long.class);

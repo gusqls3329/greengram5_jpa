@@ -20,9 +20,32 @@
         ORDER BY A.ifeed_comment
         LIMIT #{startIdx}, #{rowCount}
     </select>
+    <select id="selFeedCommentEachTop4">
+        SELECT A.ifeed_comment AS ifeedComment
+        , A.ifeed
+        , A.comment
+        , A.created_at AS createdAt
+        , B.iuser AS writerIuser
+        , B.nm AS writerNm
+        , B.pic AS writerPic
+        FROM (
+        SELECT
+        ROW_NUMBER() OVER(PARTITION BY ifeed) rnum
+        , ifeed, COMMENT, ifeed_comment, iuser, created_at
+        FROM t_feed_comment
+        WHERE ifeed IN
+        <foreach collection="list" item="item" open="(" close=")" separator=",">
+            #{item.ifeed}
+        </foreach>
+        ) A
+        INNER JOIN t_user B
+        ON A.iuser = B.iuser
+        where A.rnum <![CDATA[ <= ]]> 4
+         </select>
 
     <delete id="delFeedCommentAll">
         DELETE FROM t_feed_comment
         WHERE ifeed = #{ifeed}
     </delete>
+    <
 </mapper>

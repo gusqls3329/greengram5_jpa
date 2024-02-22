@@ -1,6 +1,7 @@
 package com.green.greengram4.feed;
 
 import com.green.greengram4.common.ResVo;
+import com.green.greengram4.entity.FeedEntity;
 import com.green.greengram4.feed.model.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

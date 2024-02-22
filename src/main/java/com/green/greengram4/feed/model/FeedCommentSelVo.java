@@ -16,5 +16,5 @@ public class FeedCommentSelVo {
     private int writerIuser;
     private String writerNm;
     private String writerPic;
-
+    private int ifeed;
 }

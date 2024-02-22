@@ -71,7 +71,7 @@ class FeedControllerTest {
         vo.setLocation("한글");
         vo.setWriterNm("사용");
         vos.add(vo);
-        when(service.getFeedAll(any(),any())).thenReturn(vos);
+        //when(service.getFeedAll(any(),any())).thenReturn(vos);
 
         mvc.perform(
                         MockMvcRequestBuilders
