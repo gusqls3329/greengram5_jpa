@@ -4326,3 +4326,6 @@ java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceed
 [2024-02-21 13:17:11 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8082 (http) with context path ''[0;39m
 [2024-02-21 13:17:11 [32mINFO [0;39m restartedMain] [com.green.greengram4.Greengram4Application] [36mStarted Greengram4Application in 1.685 seconds (process running for 2037.993)[0;39m
 [2024-02-21 13:17:11 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-02-21 14:13:57 [32mINFO [0;39m SpringApplicationShutdownHook] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-02-21 14:13:57 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-7 - Shutdown initiated...[0;39m
+[2024-02-21 14:13:57 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-7 - Shutdown completed.[0;39m
